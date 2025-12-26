@@ -10,11 +10,13 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, sans-serif;
 }
 
+/* ===== PAGE SPACING (مثل سایت اصلی) ===== */
 body{
-  background:#f2f2f2;
+  background:#ffffff;
+  padding:12px;
 }
 
 /* ===== HEADER ===== */
@@ -22,79 +24,83 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 14px;
-  background:#ffffff;
-  border-bottom:1px solid #e0e0e0;
+  padding:10px 12px;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
 }
 
 .logo img{
-  height:42px;
+  height:38px;
 }
 
 .menu-btn{
   font-size:26px;
-  color:#0a7dbd;
+  color:#1f4fa3;
   cursor:pointer;
 }
 
 /* ===== MENU ===== */
 #menu{
   display:none;
-  background:#ffffff;
-  border-bottom:1px solid #ddd;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
 }
 
 #menu a{
   display:block;
-  padding:12px 16px;
+  padding:12px;
   text-decoration:none;
   color:#000;
   border-top:1px solid #eee;
 }
 
-/* ===== CARD ===== */
-.card{
+/* ===== CONTENT WRAPPER ===== */
+.content{
   max-width:420px;
   margin:0 auto;
-  background:#ffffff;
-  text-align:center;
-  padding-bottom:20px;
+  padding:14px 12px;
 }
 
-/* خط آبی بالای کارت (دقیق مثل عکس) */
+/* ===== CARD ===== */
+.card{
+  background:#ffffff;
+  text-align:center;
+  border-radius:2px;
+}
+
+/* خط آبی بالای کارت */
 .card::before{
   content:"";
   display:block;
   width:70px;
   height:4px;
-  background:#0a7dbd;
-  margin:18px auto 14px;
+  background:#1f4fa3;
+  margin:10px auto 18px;
 }
 
-/* ===== REF NUMBER ===== */
+/* ===== REFERENCE ===== */
 .ref{
-  color:#0a7dbd;
+  color:#1f4fa3;
   font-size:20px;
-  font-weight:600;
-  line-height:1.5;
+  font-weight:bold;
   margin-bottom:18px;
 }
 
 /* ===== PHOTO ===== */
 .photo img{
-  width:150px;
-  height:190px;
+  width:160px;
+  height:200px;
   object-fit:cover;
-  background:#fff;
   border:1px solid #d0d0d0;
+  background:#fff;
   margin-bottom:18px;
 }
 
 /* ===== TEXT ===== */
 .label{
-  color:#8c8c8c;
+  color:#9a9a9a;
   font-size:13px;
-  margin-top:14px;
+  margin-top:18px;
 }
 
 .value{
@@ -107,11 +113,11 @@ body{
 .logout{
   max-width:420px;
   margin:16px auto;
-  background:#0a7dbd;
+  background:#1f4fa3;
   color:#fff;
-  padding:13px;
+  padding:12px;
   text-align:center;
-  font-size:15px;
+  border-radius:3px;
   cursor:pointer;
 }
 
@@ -143,44 +149,44 @@ body{
   <a href="#">Contact</a>
 </div>
 
-<!-- CARD -->
-<div class="card">
+<!-- CONTENT -->
+<div class="content">
+  <div class="card">
 
-  <div class="ref">
-    Visa Reference Number –<br>
-    88006011480
+    <div class="ref">
+      Visa Reference Number –<br>
+      88006011480
+    </div>
+
+    <div class="photo">
+      <img src="photo.jpg" alt="Applicant Photo">
+    </div>
+
+    <div class="label">NAME</div>
+    <div class="value">Safi Mudasir</div>
+
+    <div class="label">Passport No</div>
+    <div class="value">P05926591</div>
+
+    <div class="label">Passport Country</div>
+    <div class="value">Afghanistan</div>
+
+    <div class="label">Visa Category</div>
+    <div class="value">Tourist / Visit</div>
+
+    <div class="label">Visa Sub Category</div>
+    <div class="value">Individual (Less Than 3 Months)</div>
+
+    <div class="label">Application Type</div>
+    <div class="value">Entry</div>
+
+    <div class="label">Staying Facility</div>
+    <div class="value">Multiple Entry – Upto 1 Year</div>
+
   </div>
-
-  <div class="photo">
-    <img src="photo.jpg" alt="Applicant Photo">
-  </div>
-
-  <div class="label">NAME</div>
-  <div class="value">Safi Mudasir</div>
-
-  <div class="label">Passport No</div>
-  <div class="value">P05926591</div>
-
-  <div class="label">Passport Country</div>
-  <div class="value">Afghanistan</div>
-
-  <div class="label">Visa Category</div>
-  <div class="value">Tourist / Visit</div>
-
-  <div class="label">Visa Sub Category</div>
-  <div class="value">Individual (Less Than 3 Months)</div>
-
-  <div class="label">Application Type</div>
-  <div class="value">Entry</div>
-
-  <div class="label">Staying Facility</div>
-  <div class="value">Multiple Entry – Upto 1 Year</div>
-
-  <div class="label">Visa Start Date</div>
-  <div class="value">21 Dec 2025</div>
-
 </div>
 
+<!-- LOGOUT -->
 <div class="logout" onclick="logout()">Logout</div>
 
 <script>
