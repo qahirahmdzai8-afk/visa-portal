@@ -49,33 +49,36 @@ body{
   overflow:hidden;
 }
 
-/* خط آبی مثل سایت رسمی */
+/* ✅ خط آبی اصلاح‌شده (بالا، چپ، Official) */
 .top-line{
+  position:absolute;
+  top:14px;
+  left:14px;
   width:70px;
   height:4px;
   background:#1f4fa3;
-  margin:18px;
 }
 
+/* محتوا */
 .content{
-  padding:12px 26px 26px;
+  padding:28px 26px 26px; /* کمی فاصله از خط آبی */
   text-align:center;
   position:relative;
   z-index:1;
 }
 
-/* ===== Back Logo (FIXED) ===== */
+/* ✅ Back Logo اصلاح‌شده (خیلی محو و پایین) */
 .card::after{
   content:"";
   position:absolute;
-  bottom:-40px;              /* فقط این اصلاح */
+  bottom:-40px;
   left:50%;
   transform:translateX(-50%);
   width:260px;
   height:260px;
   background:url("logo.jpg") no-repeat center;
   background-size:contain;
-  opacity:0.02;              /* بسیار محو */
+  opacity:0.02;
   z-index:0;
 }
 
@@ -186,6 +189,7 @@ body{
 <!-- CARD -->
 <div class="card">
 
+  <!-- خط آبی -->
   <div class="top-line"></div>
 
   <div class="content">
