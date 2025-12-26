@@ -3,97 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa</title>
+<title>Pak Visa – Visa Details</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BACKGROUND */
 body{
-  background:#f3f5f7;
+  background:#ffffff;
+  color:#4f4f4f;
 }
 
 /* HEADER */
-header{
+.header{
   background:#ffffff;
-  padding:12px 16px;
+  border-bottom:1px solid #e1e1e1;
+  padding:10px 14px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  border-bottom:1px solid #e3e6ea;
 }
 
 .logo img{
-  height:36px;
+  height:38px;
 }
 
-/* MENU ICON */
 .menu-btn{
-  font-size:24px;
-  color:#000;
+  font-size:26px;
+  color:#1f4fa3;
   cursor:pointer;
 }
 
 /* MENU */
-nav{
+.menu{
   display:none;
   background:#ffffff;
-  border-bottom:1px solid #e3e6ea;
+  border-bottom:1px solid #e1e1e1;
 }
 
-nav a{
+.menu a{
   display:block;
-  padding:14px 16px;
+  padding:14px;
   text-decoration:none;
-  color:#2b2b2b;
-  font-size:15px;
+  color:#4f4f4f;
   border-top:1px solid #f0f0f0;
 }
 
 /* CARD */
 .card{
-  max-width:350px;
-  margin:18px auto;
-  background:#ffffff;
-  border-radius:8px;
-  padding:22px 18px;
-  box-shadow:0 1px 4px rgba(0,0,0,0.08);
+  max-width:360px;
+  margin:20px auto;
+  background:#f2f5f7;
+  border-radius:2px;
+}
+
+.card::before{
+  content:"";
+  display:block;
+  width:60px;
+  height:4px;
+  background:#1f4fa3;
+  margin:16px;
+}
+
+.content{
+  padding:10px 20px 28px;
   text-align:center;
 }
 
-/* TEXT COLORS */
+.ref-title{
+  color:#1f4fa3;
+  font-size:18px;
+  font-weight:600;
+}
+
+.ref-number{
+  margin-top:6px;
+  font-size:24px;
+  font-weight:700;
+  color:#1f4fa3;
+}
+
+.divider{
+  height:1px;
+  background:#dcdcdc;
+  margin:18px 0;
+}
+
+.photo{
+  width:170px;
+  margin:0 auto 16px;
+  background:#ffffff;
+  padding:6px;
+}
+
+.photo img{
+  width:100%;
+}
+
 .label{
-  color:#9aa0a6;
-  font-size:14px;
   margin-top:18px;
+  font-size:13px;
+  font-weight:700;
+  color:#8a8a8a;
 }
 
 .value{
-  color:#000000;
-  font-size:16px;
   margin-top:6px;
+  font-size:16px;
+  color:#4f4f4f;
 }
 
-/* BUTTON */
-.btn{
-  margin-top:28px;
+.footer-btn{
+  max-width:360px;
+  margin:20px auto 30px;
+  text-align:center;
+}
+
+.footer-btn a{
+  display:inline-block;
   background:#1f4fa3;
   color:#ffffff;
-  border:none;
-  width:100%;
-  padding:14px 0;
-  font-size:16px;
-  border-radius:4px;
-  cursor:pointer;
+  padding:12px 26px;
+  text-decoration:none;
+  font-size:15px;
+  border-radius:2px;
 }
 
 /* LOADER */
-.loader-page{
+.loader-bg{
   position:fixed;
   inset:0;
   background:#ffffff;
@@ -104,17 +146,16 @@ nav a{
 }
 
 .loader{
-  width:64px;
-  height:64px;
-  border:4px solid #d7e1ee;
+  width:60px;
+  height:60px;
+  border:4px solid #dbe3f0;
   border-top:4px solid #1f4fa3;
   border-radius:50%;
   animation:spin 1s linear infinite;
 }
 
 @keyframes spin{
-  0%{transform:rotate(0deg);}
-  100%{transform:rotate(360deg);}
+  to{transform:rotate(360deg);}
 }
 </style>
 </head>
@@ -122,53 +163,67 @@ nav a{
 <body>
 
 <!-- LOADER -->
-<div class="loader-page" id="loader">
+<div class="loader-bg" id="loader">
   <div class="loader"></div>
 </div>
 
 <!-- HEADER -->
-<header>
+<div class="header">
   <div class="logo">
     <img src="logo.jpg" alt="Pak Visa">
   </div>
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
-</header>
+</div>
 
 <!-- MENU -->
-<nav id="menu">
-  <a href="#" onclick="openPage()">Home</a>
-  <a href="#" onclick="openPage()">Visa Status</a>
-  <a href="#" onclick="openPage()">Application</a>
-  <a href="#" onclick="openPage()">Logout</a>
-</nav>
+<div class="menu" id="menu">
+  <a href="#" onclick="openLink()">Home</a>
+  <a href="#" onclick="openLink()">Visa Status</a>
+  <a href="#" onclick="openLink()">Logout</a>
+</div>
 
 <!-- CARD -->
 <div class="card">
-  <div class="label">Application Type</div>
-  <div class="value">Entry</div>
+  <div class="content">
 
-  <div class="label">Staying Facility</div>
-  <div class="value">Multiple Entry - Upto 1 Year</div>
+    <div class="ref-title">Visa Reference Number –</div>
+    <div class="ref-number">88004451584</div>
 
-  <div class="label">Visa Start Date</div>
-  <div class="value">07 Jan 2025</div>
+    <div class="divider"></div>
 
-  <div class="label">Visa End Date</div>
-  <div class="value">06 Jul 2025</div>
+    <div class="photo">
+      <img src="photo.jpg">
+    </div>
 
-  <div class="label">Visa Duration</div>
-  <div class="value">60 day(s)</div>
+    <div class="label">APPLICATION TYPE</div>
+    <div class="value">Entry</div>
 
-  <button class="btn" onclick="openPage()">Back to Login</button>
+    <div class="label">STAYING FACILITY</div>
+    <div class="value">Multiple Entry – Upto 1 Year</div>
+
+    <div class="label">VISA START DATE</div>
+    <div class="value">07 Jan 2025</div>
+
+    <div class="label">VISA END DATE</div>
+    <div class="value">06 Jul 2025</div>
+
+    <div class="label">VISA DURATION</div>
+    <div class="value">60 day(s)</div>
+
+  </div>
+</div>
+
+<div class="footer-btn">
+  <a href="#" onclick="openLink()">Back to Login</a>
 </div>
 
 <script>
 function toggleMenu(){
-  const m = document.getElementById("menu");
-  m.style.display = m.style.display === "block" ? "none" : "block";
+  const m=document.getElementById("menu");
+  m.style.display = m.style.display==="block" ? "none":"block";
 }
 
-function openPage(){
+function openLink(){
   document.getElementById("loader").style.display="flex";
   setTimeout(()=>{
     document.getElementById("loader").style.display="none";
