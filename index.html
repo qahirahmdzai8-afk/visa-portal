@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +15,34 @@
 
 body{
   background:#f2f2f2;
+}
+
+/* ===== LOADER ===== */
+#loader{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.spinner{
+  width:60px;
+  height:60px;
+  border:6px solid #e0e0e0;
+  border-top:6px solid #0a7dbd;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
 }
 
 /* ===== HEADER ===== */
@@ -63,8 +90,8 @@ body{
 }
 
 .ref{
-  color:#0a7dbd;
-  font-size:18px;
+  color:#000;
+  font-size:20px;
   font-weight:bold;
   margin:10px 0;
 }
@@ -103,6 +130,7 @@ body{
 
 /* ===== PRINT ===== */
 @media print{
+  #loader,
   .menu-btn,
   #menu,
   .logout{
@@ -113,6 +141,11 @@ body{
 </head>
 
 <body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
 
 <!-- HEADER -->
 <div class="header">
@@ -131,7 +164,6 @@ body{
 
 <!-- CONTENT -->
 <div class="card">
-
   <div class="ref">
     Visa Reference Number<br>
     88006011480
@@ -164,7 +196,6 @@ body{
 
   <div class="label">Visa Start Date</div>
   <div class="value">21 Dec 2025</div>
-
 </div>
 
 <!-- LOGOUT -->
@@ -179,6 +210,13 @@ function toggleMenu(){
 function logout(){
   alert("Logged out successfully");
 }
+
+/* hide loader after load */
+window.addEventListener("load", function(){
+  setTimeout(function(){
+    document.getElementById("loader").style.display = "none";
+  }, 1200);
+});
 </script>
 
 </body>
