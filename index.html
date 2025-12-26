@@ -3,90 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <title>PakVisa – Visa Status</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    background:#f4f6f8;
+    background:#f2f2f2;
     color:#333;
 }
 
 /* HEADER */
 .header{
     background:#fff;
-    border-bottom:1px solid #ddd;
+    border-bottom:1px solid #dcdcdc;
 }
 
 .header-inner{
-    max-width:1100px;
+    max-width:1000px;
     margin:auto;
-    padding:12px 16px;
+    padding:10px 15px;
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
 .logo{
-    height:48px;
+    height:42px;
 }
 
 .menu{
-    font-size:28px;
+    font-size:26px;
+    color:#333;
 }
 
 /* CARD */
 .container{
-    max-width:600px;
-    margin:30px auto;
-    padding:0 12px;
+    max-width:560px;
+    margin:20px auto;
+    padding:0 10px;
 }
 
 .card{
     background:#fff;
-    padding:24px;
-    border-radius:4px;
-    box-shadow:0 0 0 1px #e0e0e0;
+    padding:22px 18px;
+    border:1px solid #e0e0e0;
 }
 
+/* TITLE */
 .title{
     text-align:center;
     color:#1b75bc;
-    font-size:22px;
-    margin-bottom:20px;
+    font-size:20px;
+    margin-bottom:16px;
+    line-height:1.4;
 }
 
 .title span{
     font-weight:bold;
 }
 
+/* PHOTO */
 .photo{
-    width:180px;
+    width:170px;
     display:block;
-    margin:0 auto 20px auto;
-    border:1px solid #ccc;
+    margin:0 auto 18px;
+    border:1px solid #cfcfcf;
 }
 
 /* INFO */
 .row{
-    margin-bottom:18px;
     text-align:center;
+    margin-bottom:16px;
 }
 
 .label{
-    font-size:13px;
-    color:#888;
+    font-size:12px;
+    color:#8a8a8a;
     margin-bottom:4px;
 }
 
 .value{
-    font-size:16px;
+    font-size:15px;
+    color:#333;
 }
 
 .bold{
@@ -96,21 +100,20 @@ body{
 /* BUTTON */
 .btn{
     width:100%;
-    padding:14px;
+    padding:13px;
     background:#1b75bc;
     color:#fff;
     border:none;
-    font-size:16px;
-    margin-top:20px;
-    cursor:pointer;
+    font-size:15px;
+    margin-top:16px;
 }
 
 /* FOOTER */
 .footer{
     text-align:center;
-    font-size:12px;
+    font-size:11px;
     color:#777;
-    padding:20px 10px;
+    padding:18px 8px;
 }
 </style>
 </head>
@@ -120,8 +123,7 @@ body{
 <!-- HEADER -->
 <div class="header">
     <div class="header-inner">
-        <!-- لوگو را اینجا عوض کن -->
-        <img src="logo.png" class="logo">
+        <img src="logo.png" class="logo" alt="PakVisa">
         <div class="menu">&#9776;</div>
     </div>
 </div>
@@ -130,13 +132,12 @@ body{
 <div class="container">
 <div class="card">
 
-<h2 class="title">
+<div class="title">
 Visa Reference Number –<br>
 <span>88004451584</span>
-</h2>
+</div>
 
-<!-- عکس را اینجا عوض کن -->
-<img src="photo.jpg" class="photo">
+<img src="photo.jpg" class="photo" alt="Photo">
 
 <div class="row">
     <div class="label">NAME</div>
@@ -193,7 +194,6 @@ Visa Reference Number –<br>
 </div>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
 COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR, GOVERNMENT OF PAKISTAN – V: 5.5.8
 </div>
