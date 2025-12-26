@@ -10,167 +10,127 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body{
   background:#f2f2f2;
 }
 
-/* ===== HEADER ===== */
+/* ===== Header ===== */
 .header{
   background:#ffffff;
-  padding:10px 14px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
   border-bottom:1px solid #ddd;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .header img{
-  height:38px;
+  height:45px;
 }
 
 .menu{
   font-size:26px;
-  cursor:pointer;
+  color:#1f4fa3;
 }
 
-/* ===== WRAPPER (NO GAP) ===== */
-.wrapper{
-  max-width:420px;
-  margin:0 auto;          /* ❗ فاصله بالا صفر */
-  padding:0 10px;
-  background:#ffffff;     /* اول سفید */
+/* ===== Card ===== */
+.container{
+  display:flex;
+  justify-content:center;
+  padding:25px 15px;
 }
 
-/* ===== CARD ===== */
 .card{
   background:#ffffff;
-  padding:20px;
-  border-top:4px solid #0a7dbd;   /* نوار آبی */
-  box-shadow:0 4px 12px rgba(0,0,0,0.12);
-}
-
-/* ===== REF NUMBER ===== */
-.ref{
+  width:100%;
+  max-width:420px;
+  padding:25px;
+  border-radius:8px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
   text-align:center;
-  color:#0a7dbd;
-  font-size:20px;
-  font-weight:bold;
-  margin-bottom:18px;
 }
 
-/* ===== PHOTO ===== */
+.card h3{
+  color:#1f4fa3;
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.card h2{
+  color:#1f4fa3;
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+/* Photo */
 .photo{
-  text-align:center;
-  margin-bottom:16px;
+  width:100%;
+  max-width:180px;
+  margin:0 auto 20px;
 }
 
 .photo img{
-  width:150px;
-  border:1px solid #ccc;
-  background:#ffffff;
+  width:100%;
+  border-radius:6px;
 }
 
-/* ===== TEXT ===== */
+/* Info */
 .label{
-  margin-top:14px;
-  font-size:13px;
   color:#777;
-  text-align:center;
+  font-size:13px;
+  margin-top:12px;
+  font-weight:bold;
 }
 
 .value{
-  font-size:16px;
-  color:#333;
+  font-size:15px;
   margin-top:4px;
-  text-align:center;
 }
 
-/* ===== BUTTON ===== */
-.btn{
-  margin:25px auto 5px;
-  text-align:center;
-}
-
-.btn a{
-  background:#0a7dbd;
-  color:#ffffff;
-  padding:12px 26px;
-  text-decoration:none;
-  font-weight:bold;
-  display:inline-block;
-}
-
-/* ===== FOOTER ===== */
-.footer{
-  text-align:center;
-  font-size:12px;
-  color:#000;
-  background:#e6e6e6;
-  padding:12px;
-  margin-top:20px;
+/* Mobile fix */
+@media (max-width:480px){
+  .card{
+    padding:20px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- Header -->
 <div class="header">
-  <img src="logo.jpg" alt="Pak Visa">
+  <img src="logo.png" alt="Pak Visa Logo">
   <div class="menu">&#9776;</div>
 </div>
 
-<!-- CARD -->
-<div class="wrapper">
+<!-- Card -->
+<div class="container">
   <div class="card">
 
-    <div class="ref">
-      Visa Reference Number –<br>
-      88006011480
-    </div>
+    <h3>Visa Reference Number –</h3>
+    <h2>88004451584</h2>
 
     <div class="photo">
       <img src="photo.jpg" alt="Applicant Photo">
     </div>
 
     <div class="label">NAME</div>
-    <div class="value">Safi Mudasir</div>
+    <div class="value">Ahmad Zai Abdul Qahir</div>
 
     <div class="label">Passport No</div>
-    <div class="value">P05926591</div>
+    <div class="value">P04382582</div>
 
     <div class="label">Passport Country</div>
     <div class="value">Afghanistan</div>
 
     <div class="label">Visa Category</div>
-    <div class="value">Tourist / Visit</div>
-
-    <div class="label">Visa Sub Category</div>
-    <div class="value">Individual (Less Than 3 Months)</div>
-
-    <div class="label">Application Type</div>
-    <div class="value">Entry</div>
-
-    <div class="label">Staying Facility</div>
-    <div class="value">Multiple Entry – Upto 1 Year</div>
-
-    <div class="label">Visa Start Date</div>
-    <div class="value">21 Dec 2025</div>
-
-    <div class="btn">
-      <a href="#">Back to Login</a>
-    </div>
+    <div class="value">Visit Visa</div>
 
   </div>
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-  COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR,<br>
-  GOVERNMENT OF PAKISTAN – V: 5.5.8
 </div>
 
 </body>
