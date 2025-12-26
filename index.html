@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa – Visa Details</title>
+<title>Pak Visa – Government of Pakistan</title>
 
 <style>
 *{
@@ -13,127 +13,131 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ===== PAGE (Government Portal UI) ===== */
+/* ===== BODY ===== */
 body{
-  background:#ffffff;   /* صفحه کاملاً سفید */
-  color:#4f4f4f;
+  background:#ffffff;
+  color:#333;
 }
 
 /* ===== HEADER ===== */
 .header{
-  background:#ffffff;
-  border-bottom:1px solid #e5e5e5;
-  padding:10px 14px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  padding:14px 16px;
+  border-bottom:1px solid #dcdcdc;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
 .logo img{
-  height:38px;
+  height:42px;
 }
 
-.menu-btn{
+.logo-text{
+  line-height:1.2;
+}
+
+.logo-text b{
+  color:#1f7a4f;
+  font-size:20px;
+}
+
+.logo-text span{
+  font-size:11px;
+  color:#6b6b6b;
+}
+
+.menu{
   font-size:26px;
-  color:#1f6fa8;
-  cursor:pointer;
+  color:#1f4fa3;
 }
 
-/* ===== OFFICIAL VISA LAYOUT (CARD) ===== */
-.card{
-  max-width:360px;
-  margin:20px auto;
-  background:#f1f4f7;   /* آبی خاکستری خیلی ملایم رسمی */
-  border-radius:2px;
+/* ===== MAIN CARD ===== */
+.container{
+  max-width:420px;
+  margin:18px auto;
+  background:#f2f5f7;
+  padding:22px 16px;
 }
 
-/* خط آبی کوچک بالا */
-.card::before{
-  content:"";
-  display:block;
-  width:60px;
-  height:4px;
-  background:#1f6fa8;
-  margin:16px;
-}
-
-/* ===== CONTENT ===== */
-.content{
-  padding:10px 20px 28px;
+/* ===== TITLE ===== */
+.title{
   text-align:center;
-}
-
-/* Reference */
-.ref-title{
-  color:#1f6fa8;
+  color:#1f4fa3;
   font-size:18px;
-  font-weight:600;
+  font-weight:bold;
 }
 
-.ref-number{
+.ref{
+  text-align:center;
+  font-size:28px;
+  font-weight:bold;
+  color:#1f4fa3;
   margin-top:6px;
-  font-size:24px;
-  font-weight:700;
-  color:#1f6fa8;
 }
 
-.divider{
+.hr{
   height:1px;
-  background:#dddddd;
+  background:#dcdcdc;
   margin:18px 0;
 }
 
-/* Photo */
+/* ===== PHOTO ===== */
 .photo{
-  width:170px;
-  margin:0 auto 16px;
-  background:#ffffff;
-  padding:6px;
-}
-
-.photo img{
-  width:100%;
-  display:block;
-}
-
-/* Labels & Values */
-.label{
-  margin-top:18px;
-  font-size:13px;
-  font-weight:700;
-  color:#9a9a9a;
-  letter-spacing:0.3px;
-}
-
-.value{
-  margin-top:6px;
-  font-size:16px;
-  color:#555555;
-}
-
-/* ===== FOOTER BUTTON (Portal Style) ===== */
-.footer-btn{
-  max-width:360px;
-  margin:20px auto 30px;
   text-align:center;
 }
 
-.footer-btn a{
-  display:inline-block;
-  background:#1f6fa8;
-  color:#ffffff;
-  padding:12px 26px;
-  text-decoration:none;
-  font-size:15px;
-  border-radius:2px;
+.photo img{
+  width:160px;
+  background:#ffffff;
+  padding:6px;
+  border:1px solid #dcdcdc;
 }
 
-/* ===== PRINT ===== */
-@media print{
-  .menu-btn,
-  .footer-btn{
-    display:none !important;
-  }
+/* ===== INFO ===== */
+.info{
+  text-align:center;
+  margin-top:16px;
+}
+
+.label{
+  font-size:13px;
+  color:#7a7a7a;
+  margin-top:14px;
+  text-transform:uppercase;
+}
+
+.value{
+  font-size:16px;
+  color:#333;
+  margin-top:4px;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  margin:28px auto 0;
+  display:block;
+  width:200px;
+  text-align:center;
+  background:#1f4fa3;
+  color:#ffffff;
+  padding:12px 0;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#7a7a7a;
+  padding:16px 10px;
+  border-top:1px solid #dcdcdc;
 }
 </style>
 </head>
@@ -144,24 +148,28 @@ body{
 <div class="header">
   <div class="logo">
     <img src="logo.jpg" alt="Pak Visa">
+    <div class="logo-text">
+      <b>Pak Visa</b><br>
+      <span>ISLAMIC REPUBLIC OF PAKISTAN</span>
+    </div>
   </div>
-  <div class="menu-btn">☰</div>
+  <div class="menu">☰</div>
 </div>
 
-<!-- OFFICIAL VISA CARD -->
-<div class="card">
-  <div class="content">
+<!-- CARD -->
+<div class="container">
 
-    <div class="ref-title">Visa Reference Number –</div>
-    <div class="ref-number">88004451584</div>
+  <div class="title">Visa Reference Number –</div>
+  <div class="ref">88004451584</div>
 
-    <div class="divider"></div>
+  <div class="hr"></div>
 
-    <div class="photo">
-      <img src="photo.jpg" alt="Applicant Photo">
-    </div>
+  <div class="photo">
+    <img src="photo.jpg" alt="Applicant Photo">
+  </div>
 
-    <div class="label">NAME</div>
+  <div class="info">
+    <div class="label">Name</div>
     <div class="value">Ahmad Zai Abdul Qahir</div>
 
     <div class="label">Passport No</div>
@@ -189,14 +197,16 @@ body{
     <div class="value">06 Jul 2025</div>
 
     <div class="label">Visa Duration</div>
-    <div class="value">60 day(s)</div>
-
+    <div class="value">60 Day(s)</div>
   </div>
+
+  <a href="#" class="btn">Back to Login</a>
+
 </div>
 
-<!-- GOVERNMENT PORTAL BUTTON -->
-<div class="footer-btn">
-  <a href="#">Back to Login</a>
+<!-- FOOTER -->
+<div class="footer">
+  COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR, GOVERNMENT OF PAKISTAN – V: 5.5.8
 </div>
 
 </body>
