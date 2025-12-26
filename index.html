@@ -2,108 +2,122 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pak Visa</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body{
-  background:#f2f2f2;
-  color:#333;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#333;
 }
 
 /* ===== HEADER ===== */
 .header{
-  background:#fff;
-  padding:12px 16px;
-  border-bottom:1px solid #ddd;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 16px;
+    border-bottom:1px solid #ddd;
 }
 
-.header img{
-  height:34px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    height:36px;
+}
+
+.logo span{
+    font-size:20px;
+    font-weight:600;
+    color:#2e7d32;
 }
 
 .menu{
-  font-size:26px;
-  color:#333;
+    font-size:26px;
 }
 
-/* ===== CARD ===== */
-.card{
-  max-width:420px;
-  margin:14px auto;
-  background:#fff;
-  border:1px solid #e0e0e0;
-  box-shadow:0 1px 2px rgba(0,0,0,0.08);
+/* ===== PROGRESS LINE ===== */
+.progress{
+    height:4px;
+    background:#e0e0e0;
 }
 
-/* خط آبی دقیق */
-.card::before{
-  content:"";
-  display:block;
-  height:4px;
-  background:#1a73b8;
+.progress div{
+    width:30%;
+    height:100%;
+    background:#1e88e5;
 }
 
 /* ===== CONTENT ===== */
-.content{
-  padding:18px 16px 10px;
-  text-align:center;
+.container{
+    max-width:420px;
+    margin:0 auto;
+    padding:20px 16px;
+    text-align:center;
 }
 
 .ref{
-  color:#1a73b8;
-  font-size:18px;
-  font-weight:600;
-  margin-bottom:16px;
+    color:#1e88e5;
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:20px;
 }
 
-/* PHOTO */
-.photo img{
-  width:155px;
-  height:195px;
-  object-fit:cover;
-  border:1px solid #cfcfcf;
-  margin-bottom:14px;
+/* ===== PHOTO ===== */
+.photo-box{
+    width:200px;
+    height:240px;
+    margin:0 auto 20px;
+    border:1px solid #ccc;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-/* TEXT */
+.photo-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ===== INFO ===== */
 .label{
-  font-size:14px;
-  color:#777;
-  margin-top:14px;
+    color:#999;
+    font-size:13px;
+    margin-top:16px;
 }
 
 .value{
-  font-size:16px;
-  margin-top:4px;
+    font-size:18px;
+    margin-top:4px;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .btn{
-  margin:20px 16px 18px;
-  background:#1a73b8;
-  color:#fff;
-  text-align:center;
-  padding:14px 0;
-  font-size:16px;
+    margin:30px auto;
+    display:block;
+    width:200px;
+    padding:14px;
+    background:#1e88e5;
+    color:#fff;
+    text-decoration:none;
+    border-radius:4px;
+    font-size:16px;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer{
-  text-align:center;
-  font-size:13px;
-  color:#777;
-  padding:16px 10px;
+    text-align:center;
+    font-size:12px;
+    color:#666;
+    padding:20px 10px;
+    border-top:1px solid #ddd;
 }
 </style>
 </head>
@@ -112,21 +126,29 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <img src="logo.png" alt="Pak Visa">
-  <div class="menu">☰</div>
+    <div class="logo">
+        <!-- اگر لوگو نشان نداد، نام فایل را دقیق همین بگذار -->
+        <img src="logo.png" alt="Pak Visa Logo">
+        <span>Pak Visa</span>
+    </div>
+    <div class="menu">☰</div>
 </div>
 
-<!-- CARD -->
-<div class="card">
-  <div class="content">
+<div class="progress">
+    <div></div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
 
     <div class="ref">
-      Visa Reference Number –<br>
-      88004451584
+        Visa Reference Number –<br>
+        88004451584
     </div>
 
-    <div class="photo">
-      <img src="photo.jpg" alt="Photo">
+    <div class="photo-box">
+        <!-- عکس -->
+        <img src="photo.jpg" alt="Applicant Photo">
     </div>
 
     <div class="label">NAME</div>
@@ -159,14 +181,13 @@ body{
     <div class="label">Visa Duration</div>
     <div class="value">60 day(s)</div>
 
-  </div>
+    <a class="btn" href="#">Back to Login</a>
 </div>
 
-<div class="btn">Back to Login</div>
-
+<!-- FOOTER -->
 <div class="footer">
-  COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR,<br>
-  GOVERNMENT OF PAKISTAN – V: 5.5.8
+    COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR,<br>
+    GOVERNMENT OF PAKISTAN – V: 5.5.8
 </div>
 
 </body>
