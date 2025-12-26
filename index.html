@@ -6,92 +6,102 @@
 <title>Pak Visa</title>
 
 <style>
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4f6f8;
-    color:#333;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-/* HEADER */
+body{
+  background:#f3f5f7;
+  color:#444;
+}
+
+/* ===== HEADER ===== */
 .header{
-    background:#fff;
-    border-bottom:1px solid #ddd;
-    padding:12px 16px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
 
 .header img{
-    height:36px;
+  height:38px;
 }
 
-/* CARD */
+.menu{
+  font-size:26px;
+}
+
+/* ===== CARD ===== */
+.wrapper{
+  padding:14px;
+}
+
 .card{
-    background:#fff;
-    max-width:420px;
-    margin:20px auto;
-    padding:24px 16px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    border-radius:4px;
+  background:#fff;
+  max-width:420px;
+  margin:0 auto;
+  padding:26px 18px;
+  box-shadow:0 1px 6px rgba(0,0,0,.15);
 }
 
-/* REF NUMBER */
+/* ===== REF NUMBER ===== */
 .ref{
-    text-align:center;
-    color:#1e73be;
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:20px;
+  text-align:center;
+  color:#1b75bc;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:20px;
 }
 
-/* PHOTO */
-.photo-box{
-    text-align:center;
-    margin-bottom:20px;
+/* ===== PHOTO ===== */
+.photo{
+  text-align:center;
+  margin-bottom:18px;
 }
-.photo-box img{
-    width:160px;
-    height:auto;
-    border:1px solid #ccc;
+.photo img{
+  width:180px;
+  border:1px solid #ccc;
 }
 
-/* TEXT */
+/* ===== TEXT ===== */
 .label{
-    text-align:center;
-    font-size:13px;
-    color:#777;
-    margin-top:16px;
+  text-align:center;
+  font-size:13px;
+  color:#777;
+  margin-top:18px;
 }
 
 .value{
-    text-align:center;
-    font-size:16px;
-    font-weight:500;
-    margin-top:4px;
+  text-align:center;
+  font-size:16px;
+  font-weight:500;
+  margin-top:6px;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .btn{
-    display:block;
-    margin:30px auto 10px;
-    width:200px;
-    text-align:center;
-    background:#1e73be;
-    color:#fff;
-    padding:12px;
-    text-decoration:none;
-    border-radius:3px;
-    font-size:16px;
+  display:block;
+  margin:30px auto 0;
+  width:220px;
+  background:#1b75bc;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  text-decoration:none;
+  font-size:16px;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer{
-    text-align:center;
-    font-size:12px;
-    color:#666;
-    padding:20px 10px;
+  text-align:center;
+  font-size:12px;
+  color:#666;
+  padding:18px 10px;
 }
 </style>
 </head>
@@ -100,60 +110,63 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-    <img src="logo.png" alt="Pak Visa">
-    <div>☰</div>
+  <img src="logo.jpg" alt="Pak Visa">
+  <div class="menu">☰</div>
 </div>
+
+<div class="wrapper">
 
 <!-- CARD -->
 <div class="card">
 
-    <div class="ref">
-        Visa Reference Number –<br>
-        88004451584
-    </div>
+  <div class="ref">
+    Visa Reference Number –<br>
+    88004451584
+  </div>
 
-    <div class="photo-box">
-        <img src="photo.jpg" alt="Photo">
-    </div>
+  <div class="photo">
+    <img src="photo.jpg" alt="Photo">
+  </div>
 
-    <div class="label">NAME</div>
-    <div class="value">Ahmad Zai Abdul Qahir</div>
+  <div class="label">NAME</div>
+  <div class="value">Ahmad Zai Abdul Qahir</div>
 
-    <div class="label">Passport No</div>
-    <div class="value">P04382582</div>
+  <div class="label">Passport No</div>
+  <div class="value">P04382582</div>
 
-    <div class="label">Passport Country</div>
-    <div class="value">Afghanistan</div>
+  <div class="label">Passport Country</div>
+  <div class="value">Afghanistan</div>
 
-    <div class="label">Visa Category</div>
-    <div class="value">Tourist / Visit</div>
+  <div class="label">Visa Category</div>
+  <div class="value">Tourist / Visit</div>
 
-    <div class="label">Visa Sub Category</div>
-    <div class="value">Individual (Less Than 3 Months)</div>
+  <div class="label">Visa Sub Category</div>
+  <div class="value">Individual (Less Than 3 Months)</div>
 
-    <div class="label">Application Type</div>
-    <div class="value">Entry</div>
+  <div class="label">Application Type</div>
+  <div class="value">Entry</div>
 
-    <div class="label">Staying Facility</div>
-    <div class="value">Multiple Entry – Upto 1 Year</div>
+  <div class="label">Staying Facility</div>
+  <div class="value">Multiple Entry – Upto 1 Year</div>
 
-    <div class="label">Visa Start Date</div>
-    <div class="value">07 Jan 2025</div>
+  <div class="label">Visa Start Date</div>
+  <div class="value">07 Jan 2025</div>
 
-    <div class="label">Visa End Date</div>
-    <div class="value">06 Jul 2025</div>
+  <div class="label">Visa End Date</div>
+  <div class="value">06 Jul 2025</div>
 
-    <div class="label">Visa Duration</div>
-    <div class="value">60 day(s)</div>
+  <div class="label">Visa Duration</div>
+  <div class="value">60 day(s)</div>
 
-    <a href="#" class="btn">Back to Login</a>
+  <a href="#" class="btn">Back to Login</a>
 
+</div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-    COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR,<br>
-    GOVERNMENT OF PAKISTAN – V: 5.5.8
+  COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR,<br>
+  GOVERNMENT OF PAKISTAN – V: 5.5.8
 </div>
 
 </body>
