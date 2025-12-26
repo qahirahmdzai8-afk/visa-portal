@@ -13,31 +13,29 @@
   font-family: Arial, sans-serif;
 }
 
+/* BACKGROUND */
 body{
-  background:#f2f4f7;
+  background:#f3f5f7;
 }
 
 /* HEADER */
 header{
   background:#ffffff;
-  border-bottom:1px solid #ddd;
-  padding:10px 15px;
+  padding:12px 16px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
+  border-bottom:1px solid #e3e6ea;
 }
 
 .logo img{
-  height:40px;
+  height:36px;
 }
 
+/* MENU ICON */
 .menu-btn{
-  font-size:22px;
+  font-size:24px;
+  color:#000;
   cursor:pointer;
 }
 
@@ -45,47 +43,50 @@ header{
 nav{
   display:none;
   background:#ffffff;
-  border-bottom:1px solid #ddd;
+  border-bottom:1px solid #e3e6ea;
 }
 
 nav a{
   display:block;
-  padding:12px 15px;
+  padding:14px 16px;
   text-decoration:none;
-  color:#333;
-  border-top:1px solid #eee;
+  color:#2b2b2b;
+  font-size:15px;
+  border-top:1px solid #f0f0f0;
 }
 
-/* CONTENT */
-.container{
+/* CARD */
+.card{
   max-width:350px;
-  margin:20px auto;
+  margin:18px auto;
   background:#ffffff;
-  padding:20px;
-  border-radius:6px;
-  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  border-radius:8px;
+  padding:22px 18px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.08);
   text-align:center;
 }
 
+/* TEXT COLORS */
 .label{
-  color:#777;
+  color:#9aa0a6;
   font-size:14px;
-  margin-top:15px;
+  margin-top:18px;
 }
 
 .value{
+  color:#000000;
   font-size:16px;
-  color:#000;
-  margin-top:5px;
+  margin-top:6px;
 }
 
+/* BUTTON */
 .btn{
-  margin-top:25px;
+  margin-top:28px;
   background:#1f4fa3;
-  color:#fff;
-  padding:12px;
+  color:#ffffff;
   border:none;
   width:100%;
+  padding:14px 0;
   font-size:16px;
   border-radius:4px;
   cursor:pointer;
@@ -94,10 +95,7 @@ nav a{
 /* LOADER */
 .loader-page{
   position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  inset:0;
   background:#ffffff;
   display:none;
   align-items:center;
@@ -106,9 +104,9 @@ nav a{
 }
 
 .loader{
-  width:70px;
-  height:70px;
-  border:4px solid #cfd8e3;
+  width:64px;
+  height:64px;
+  border:4px solid #d7e1ee;
   border-top:4px solid #1f4fa3;
   border-radius:50%;
   animation:spin 1s linear infinite;
@@ -131,21 +129,21 @@ nav a{
 <!-- HEADER -->
 <header>
   <div class="logo">
-    <img src="logo.jpg" alt="Pak Visa Logo">
+    <img src="logo.jpg" alt="Pak Visa">
   </div>
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </header>
 
 <!-- MENU -->
 <nav id="menu">
-  <a href="#" onclick="openLink()">Home</a>
-  <a href="#" onclick="openLink()">Visa Status</a>
-  <a href="#" onclick="openLink()">Application</a>
-  <a href="#" onclick="openLink()">Logout</a>
+  <a href="#" onclick="openPage()">Home</a>
+  <a href="#" onclick="openPage()">Visa Status</a>
+  <a href="#" onclick="openPage()">Application</a>
+  <a href="#" onclick="openPage()">Logout</a>
 </nav>
 
-<!-- CONTENT -->
-<div class="container">
+<!-- CARD -->
+<div class="card">
   <div class="label">Application Type</div>
   <div class="value">Entry</div>
 
@@ -161,20 +159,19 @@ nav a{
   <div class="label">Visa Duration</div>
   <div class="value">60 day(s)</div>
 
-  <button class="btn" onclick="openLink()">Back to Login</button>
+  <button class="btn" onclick="openPage()">Back to Login</button>
 </div>
 
 <script>
 function toggleMenu(){
-  let menu = document.getElementById("menu");
-  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+  const m = document.getElementById("menu");
+  m.style.display = m.style.display === "block" ? "none" : "block";
 }
 
-function openLink(){
-  document.getElementById("loader").style.display = "flex";
-  setTimeout(function(){
-    document.getElementById("loader").style.display = "none";
-    alert("Page Loaded");
+function openPage(){
+  document.getElementById("loader").style.display="flex";
+  setTimeout(()=>{
+    document.getElementById("loader").style.display="none";
   },2000);
 }
 </script>
