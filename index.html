@@ -10,12 +10,12 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, sans-serif;
+  font-family:Arial, sans-serif;
 }
 
-/* ===== PAGE ===== */
+/* ===== PAGE BACKGROUND (چوکات آبی روشن) ===== */
 body{
-  background:#eef3f7;   /* 🔹 آبی خیلی روشن (مثل سایت اصلی) */
+  background:#f3f6f9;   /* آبی خیلی روشن مثل سایت اصلی */
   color:#333;
 }
 
@@ -24,79 +24,104 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:14px 18px;
+  padding:10px 14px;
   background:#ffffff;
   border-bottom:1px solid #e6e6e6;
 }
 
-.header img{
-  height:36px;
+.logo img{
+  height:38px;
+  display:block;
 }
 
-.menu{
-  font-size:26px;
-  color:#0b6fae;
+.menu-btn{
+  font-size:28px;
+  color:#1f4fa3;
+  cursor:pointer;
 }
 
-/* ===== MAIN WRAPPER (همه چوکات آبی) ===== */
-.wrapper{
-  padding:30px 12px 60px;
+/* ===== MENU ===== */
+#menu{
+  display:none;
+  background:#ffffff;
+  border-bottom:1px solid #e6e6e6;
 }
 
-/* ===== CONTENT WIDTH ===== */
-.container{
+#menu a{
+  display:block;
+  padding:12px 14px;
+  text-decoration:none;
+  color:#333;
+  border-top:1px solid #f0f0f0;
+}
+
+/* ===== CARD (سفید خالص) ===== */
+.card{
   max-width:420px;
-  margin:0 auto;
+  margin:24px auto;
+  background:#ffffff;
+  padding:22px 16px 30px;
+  text-align:center;
 }
 
 /* ===== BLUE LINE ===== */
 .blue-line{
   width:55px;
   height:4px;
-  background:#0b6fae;
-  margin-bottom:22px;
-}
-
-/* ===== CARD ===== */
-.card{
-  background:#ffffff;   /* فقط خود کارت سفید */
-  padding:28px 18px 36px;
-  text-align:center;
+  background:#1f4fa3;
+  margin:0 0 18px 0;
 }
 
 /* ===== REF ===== */
 .ref{
-  color:#2b78b8;
-  font-size:22px;
+  color:#1f4fa3;
+  font-size:19px;
   font-weight:600;
-  margin-bottom:26px;
+  margin-bottom:22px;
 }
 
 /* ===== PHOTO ===== */
-.photo{
-  margin-bottom:26px;
-}
-
 .photo img{
-  width:160px;
-  height:200px;
+  width:150px;
+  height:190px;
   object-fit:cover;
-  border:1px solid #e0e0e0;
+  border:1px solid #dcdcdc;
   background:#ffffff;
+  margin-bottom:18px;
 }
 
 /* ===== TEXT ===== */
 .label{
-  font-size:13px;
   color:#9a9a9a;
-  margin-top:18px;
+  font-size:13px;
+  margin-top:14px;
 }
 
 .value{
-  font-size:17px;
-  color:#555;
-  margin-top:6px;
-  font-weight:500;
+  font-size:16px;
+  margin-top:4px;
+  color:#444;
+}
+
+/* ===== LOGOUT ===== */
+.logout{
+  max-width:420px;
+  margin:10px auto 30px;
+  background:#1f4fa3;
+  color:#ffffff;
+  padding:12px;
+  text-align:center;
+  border-radius:3px;
+  cursor:pointer;
+}
+
+/* ===== PRINT ===== */
+@media print{
+  .menu-btn,
+  #menu,
+  .logout{
+    display:none !important;
+  }
 }
 </style>
 </head>
@@ -105,43 +130,71 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <img src="logo.jpg" alt="Pak Visa">
-  <div class="menu">☰</div>
-</div>
-
-<!-- MAIN AREA -->
-<div class="wrapper">
-  <div class="container">
-
-    <div class="blue-line"></div>
-
-    <div class="card">
-
-      <div class="ref">
-        Visa Reference Number –<br>
-        88004451584
-      </div>
-
-      <div class="photo">
-        <img src="photo.jpg" alt="Photo">
-      </div>
-
-      <div class="label">NAME</div>
-      <div class="value">Ahmad Zai Abdul Qahir</div>
-
-      <div class="label">Passport No</div>
-      <div class="value">P04382582</div>
-
-      <div class="label">Passport Country</div>
-      <div class="value">Afghanistan</div>
-
-      <div class="label">Visa Category</div>
-      <div class="value">Tourist / Visit</div>
-
-    </div>
-
+  <div class="logo">
+    <img src="logo.jpg" alt="Pak Visa">
   </div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </div>
+
+<!-- MENU -->
+<div id="menu">
+  <a href="#">Home</a>
+  <a href="#">Visa Status</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- CARD -->
+<div class="card">
+
+  <div class="blue-line"></div>
+
+  <div class="ref">
+    Visa Reference Number –<br>
+    88006011480
+  </div>
+
+  <div class="photo">
+    <img src="photo.jpg" alt="Photo">
+  </div>
+
+  <div class="label">NAME</div>
+  <div class="value">Safi Mudasir</div>
+
+  <div class="label">Passport No</div>
+  <div class="value">P05926591</div>
+
+  <div class="label">Passport Country</div>
+  <div class="value">Afghanistan</div>
+
+  <div class="label">Visa Category</div>
+  <div class="value">Tourist / Visit</div>
+
+  <div class="label">Visa Sub Category</div>
+  <div class="value">Individual (Less Than 3 Months)</div>
+
+  <div class="label">Application Type</div>
+  <div class="value">Entry</div>
+
+  <div class="label">Staying Facility</div>
+  <div class="value">Multiple Entry – Upto 1 Year</div>
+
+  <div class="label">Visa Start Date</div>
+  <div class="value">21 Dec 2025</div>
+
+</div>
+
+<div class="logout" onclick="logout()">Logout</div>
+
+<script>
+function toggleMenu(){
+  var m = document.getElementById("menu");
+  m.style.display = (m.style.display === "block") ? "none" : "block";
+}
+
+function logout(){
+  alert("Logged out successfully");
+}
+</script>
 
 </body>
 </html>
