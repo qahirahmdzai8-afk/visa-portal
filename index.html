@@ -13,14 +13,15 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ===== PAGE BACKGROUND (official light gray) ===== */
 body{
   background:#f3f5f7;
 }
 
 /* ===== HEADER ===== */
 .header{
-  background:#fff;
-  border-bottom:1px solid #dcdcdc;
+  background:#ffffff;
+  border-bottom:1px solid #e1e1e1;
   padding:10px 14px;
   display:flex;
   align-items:center;
@@ -40,27 +41,27 @@ body{
 /* ===== MENU ===== */
 #menu{
   display:none;
-  background:#fff;
-  border-bottom:1px solid #ddd;
+  background:#ffffff;
+  border-bottom:1px solid #e1e1e1;
 }
 
 #menu a{
   display:block;
   padding:14px;
   text-decoration:none;
-  color:#000;
-  border-top:1px solid #eee;
+  color:#333333;
+  border-top:1px solid #eeeeee;
 }
 
 /* ===== CARD ===== */
 .card{
-  max-width:380px;   /* ✅ اندازه دقیق Visa Details Page */
+  max-width:420px;
   margin:18px auto;
-  background:#fff;
-  box-shadow:0 2px 6px rgba(0,0,0,.1);
+  background:#ffffff;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
 }
 
-/* blue line */
+/* blue indicator line */
 .card::before{
   content:"";
   display:block;
@@ -94,8 +95,8 @@ body{
   margin:25px auto 15px;
   width:190px;
   padding:8px;
-  border:1px solid #ddd;
-  background:#fff;
+  border:1px solid #dddddd;
+  background:#ffffff;
 }
 
 .photo img{
@@ -108,21 +109,21 @@ body{
   margin-top:18px;
   font-size:14px;
   font-weight:700;
-  color:#777;
+  color:#7a7a7a;
 }
 
 .value{
   margin-top:6px;
   font-size:16px;
-  color:#333;
+  color:#333333;
 }
 
 /* ===== LOGOUT ===== */
 .logout{
-  max-width:380px;   /* ✅ هم‌اندازه کارت */
+  max-width:420px;
   margin:15px auto;
   background:#1f4fa3;
-  color:#fff;
+  color:#ffffff;
   padding:14px;
   text-align:center;
   border-radius:3px;
@@ -138,6 +139,7 @@ body{
 
 <body>
 
+<!-- HEADER -->
 <div class="header">
   <div class="logo">
     <img src="logo.jpg" alt="Pak Visa">
@@ -145,12 +147,14 @@ body{
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </div>
 
+<!-- MENU -->
 <div id="menu">
   <a href="#">Home</a>
   <a href="#">Visa Status</a>
   <a href="#">Contact</a>
 </div>
 
+<!-- CARD -->
 <div class="card">
   <div class="content">
 
