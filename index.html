@@ -6,19 +6,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body{
+*{
+  box-sizing:border-box;
   margin:0;
+  padding:0;
   font-family:Arial, sans-serif;
-  background:#f5f5f5;
 }
 
-/* HEADER */
+body{
+  background:#f4f4f4;
+}
+
+/* ===== HEADER ===== */
 .header{
   background:#fff;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 15px;
+  padding:10px 14px;
   border-bottom:1px solid #ddd;
 }
 
@@ -28,49 +33,74 @@ body{
 }
 
 .logo-box img{
-  height:45px;
-  margin-right:10px;
+  height:42px;
+  margin-right:8px;
+}
+
+.logo-text strong{
+  display:block;
+  font-size:16px;
 }
 
 .logo-text span{
-  display:block;
   font-size:12px;
   color:#555;
 }
 
 .menu{
   font-size:26px;
-  text-decoration:none;
   color:#000;
+  text-decoration:none;
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
 .container{
   max-width:420px;
-  margin:25px auto;
+  margin:20px auto;
   background:#fff;
-  padding:20px;
+  padding:18px;
   text-align:center;
 }
 
-h1{margin:5px 0 15px;}
-
-.profile{
-  width:160px;
-  border:1px solid #ccc;
-  margin:15px 0;
+.container h2{
+  font-size:18px;
+  font-weight:600;
 }
 
+.container h1{
+  font-size:28px;
+  margin:8px 0 15px;
+}
+
+/* ===== PHOTO ===== */
+.profile{
+  width:140px;
+  height:180px;
+  object-fit:cover;
+  border:1px solid #ccc;
+  padding:4px;
+  background:#fff;
+  display:block;
+  margin:10px auto 15px;
+}
+
+/* ===== INFO ===== */
 .info p{
-  margin:10px 0;
+  margin:6px 0;
+  line-height:1.4;
 }
 
 .info span{
   display:block;
-  font-size:13px;
+  font-size:12px;
   color:#777;
 }
 
+.info p{
+  font-size:15px;
+}
+
+/* ===== BUTTON ===== */
 button{
   width:100%;
   padding:12px;
@@ -79,12 +109,12 @@ button{
   border:none;
   font-size:16px;
   margin-top:20px;
+  cursor:pointer;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer{
-  margin-top:30px;
-  padding:15px;
+  margin:25px 10px;
   font-size:12px;
   text-align:center;
   color:#444;
@@ -97,7 +127,7 @@ footer{
 <!-- HEADER -->
 <div class="header">
   <div class="logo-box">
-    <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg">
+    <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg" alt="Pak Visa">
     <div class="logo-text">
       <strong>Pak Visa</strong>
       <span>Islamic Republic of Pakistan</span>
@@ -109,25 +139,25 @@ footer{
 <!-- CONTENT -->
 <div class="container">
 
-<h2>Visa Reference Number</h2>
-<h1>88006011480</h1>
+  <h2>Visa Reference Number</h2>
+  <h1>88006011480</h1>
 
-<img class="profile" src="https://i.ibb.co/vCL5VSpn/photo.jpg">
+  <img class="profile" src="https://i.ibb.co/vCL5VSpn/photo.jpg" alt="Photo">
 
-<div class="info">
-  <p><span>Name</span> Safi Mudasir</p>
-  <p><span>Passport No</span> P05926591</p>
-  <p><span>Passport Country</span> Afghanistan</p>
-  <p><span>Visa Category</span> Tourist / Visit</p>
-  <p><span>Visa Sub Category</span> Individual (Less Than 3 Months)</p>
-  <p><span>Application Type</span> Entry</p>
-  <p><span>Staying Facility</span> Multiple Entry – Up to 1 Year</p>
-  <p><span>Visa Start Date</span> 07 Jan 2025</p>
-  <p><span>Visa End Date</span> 06 Jul 2025</p>
-  <p><span>Visa Duration</span> 60 day(s)</p>
-</div>
+  <div class="info">
+    <p><span>Name</span>Safi Mudasir</p>
+    <p><span>Passport No</span>P05926591</p>
+    <p><span>Passport Country</span>Afghanistan</p>
+    <p><span>Visa Category</span>Tourist / Visit</p>
+    <p><span>Visa Sub Category</span>Individual (Less Than 3 Months)</p>
+    <p><span>Application Type</span>Entry</p>
+    <p><span>Staying Facility</span>Multiple Entry – Up to 1 Year</p>
+    <p><span>Visa Start Date</span>07 Jan 2025</p>
+    <p><span>Visa End Date</span>06 Jul 2025</p>
+    <p><span>Visa Duration</span>60 day(s)</p>
+  </div>
 
-<button>Back to Login</button>
+  <button>Back to Login</button>
 
 </div>
 
