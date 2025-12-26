@@ -2,168 +2,199 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Pakistan Visa Application Portal</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pak Visa</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-    text-align: center;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#f2f2f2;
 }
 
 /* ===== HEADER ===== */
-.header {
-    background: #ffffff;
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #ccc;
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 12px;
+  background:#fff;
+  border-bottom:1px solid #ddd;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
 
-.logo img {
-    height: 45px;
-    margin-right: 10px;
+.logo img{
+  height:42px;
 }
 
-.logo span {
-    font-size: 18px;
-    font-weight: bold;
-    color: #1b5e20;
+.logo-text{
+  font-size:14px;
+  color:#1b5e20;
+  font-weight:bold;
+  line-height:1.2;
 }
 
-/* ===== MENU ICON ===== */
-.menu {
-    font-size: 28px;
-    cursor: pointer;
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
 }
 
-/* ===== DROPDOWN MENU ===== */
-.dropdown {
-    display: none;
-    background: #ffffff;
-    border-bottom: 1px solid #ccc;
+/* ===== MENU ===== */
+#menu{
+  display:none;
+  background:#fff;
+  border-bottom:1px solid #ddd;
 }
 
-.dropdown a {
-    display: block;
-    padding: 12px;
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    border-top: 1px solid #eee;
-}
-
-.dropdown a:hover {
-    background: #f0f0f0;
+#menu a{
+  display:block;
+  padding:12px;
+  text-decoration:none;
+  color:#000;
+  border-top:1px solid #eee;
 }
 
 /* ===== CONTENT ===== */
-.container {
-    padding: 20px;
+.card{
+  max-width:420px;
+  margin:10px auto;
+  background:#fff;
+  padding:18px;
+  text-align:center;
 }
 
-.reference {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
+.ref{
+  font-size:22px;
+  font-weight:bold;
+  margin:12px 0;
 }
 
-.photo {
-    width: 200px;
-    border: 1px solid #ccc;
-    margin: 15px auto;
+.photo img{
+  width:160px;
+  height:200px;
+  object-fit:cover;
+  border:1px solid #ccc;
+  margin:12px 0;
 }
 
-.name {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 10px;
+/* ===== TEXT ===== */
+.label{
+  color:#777;
+  font-size:13px;
+  margin-top:12px;
 }
 
-.passport {
-    font-size: 20px;
-    margin-top: 5px;
+.value{
+  font-size:16px;
+  margin-top:4px;
+  font-weight:bold;
 }
 
-/* ===== BUTTON ===== */
-button {
-    margin-top: 25px;
-    width: 90%;
-    max-width: 300px;
-    padding: 14px;
-    font-size: 20px;
-    background: #0b79b7;
-    color: white;
-    border: none;
-    border-radius: 5px;
+/* ===== LOGOUT ===== */
+.logout{
+  max-width:420px;
+  margin:15px auto;
+  background:#0a7dbd;
+  color:#fff;
+  padding:14px;
+  text-align:center;
+  border-radius:4px;
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* ===== PRINT (PDF) ===== */
+@media print{
+  .menu-btn,
+  #menu,
+  .logout{
+    display:none !important;
+  }
 }
 </style>
-
-<script>
-function toggleMenu() {
-    var menu = document.getElementById("dropdown");
-    if (menu.style.display === "block") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "block";
-    }
-}
-</script>
-
 </head>
 
 <body>
 
-<!-- ===== HEADER ===== -->
+<!-- HEADER -->
 <div class="header">
-    <div class="logo">
-        <img src="logo.jpg" alt="Logo">
-        <span>Pak Visa<br><small>Islamic Republic of Pakistan</small></span>
+  <div class="logo">
+    <img src="logo.jpg" alt="Pak Visa Logo">
+    <div class="logo-text">
+      Pak Visa<br>
+      Islamic Republic of Pakistan
     </div>
-    <div class="menu" onclick="toggleMenu()">☰</div>
+  </div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </div>
 
-<!-- ===== MENU ===== -->
-<div id="dropdown" class="dropdown">
-    <a href="#">Home</a>
-    <a href="#">Visa Status</a>
-    <a href="#">Profile</a>
-    <a href="#">Logout</a>
+<!-- MENU -->
+<div id="menu">
+  <a href="#">Home</a>
+  <a href="#">Visa Status</a>
+  <a href="#">Contact</a>
 </div>
 
-<!-- ===== CONTENT ===== -->
-<div class="container">
+<!-- CONTENT -->
+<div class="card">
 
-    <div class="reference">
-        Visa Reference Number<br>
-        88006011480
-    </div>
+  <div class="ref">
+    Visa Reference Number<br>
+    88006011480
+  </div>
 
-    <img src="photo.jpg" class="photo" alt="Photo">
+  <div class="photo">
+    <img src="photo.jpg" alt="Applicant Photo">
+  </div>
 
-    <div class="name">
-        Name: Safi Mudasir
-    </div>
+  <div class="label">Name</div>
+  <div class="value">Safi Mudasir</div>
 
-    <div class="passport">
-        Passport: P05926591
-    </div>
+  <div class="label">Passport No</div>
+  <div class="value">P05926591</div>
 
-    <button>Logout</button>
+  <div class="label">Passport Country</div>
+  <div class="value">Afghanistan</div>
+
+  <div class="label">Visa Category</div>
+  <div class="value">Tourist / Visit</div>
+
+  <div class="label">Visa Sub Category</div>
+  <div class="value">Individual (Less Than 3 Months)</div>
+
+  <div class="label">Application Type</div>
+  <div class="value">Entry</div>
+
+  <div class="label">Staying Facility</div>
+  <div class="value">Multiple Entry – Up to 1 Year</div>
+
+  <div class="label">Visa Start Date</div>
+  <div class="value">21 Dec 2025</div>
 
 </div>
 
-</body>
-</html>}
+<!-- LOGOUT -->
+<div class="logout" onclick="logout()">Logout</div>
+
+<script>
+function toggleMenu(){
+  var m = document.getElementById("menu");
+  m.style.display = (m.style.display === "block") ? "none" : "block";
+}
+
+function logout(){
+  alert("Logged out successfully");
+}
 </script>
 
 </body>
