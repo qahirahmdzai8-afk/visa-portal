@@ -6,21 +6,16 @@
 <title>Pak Visa</title>
 
 <style>
-:root{
-  --blue:#0b7dbd;
-  --soft:#f7f9fc;     /* آبی خیلی خیلی کم */
-  --gray:#8a8a8a;
-}
-
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body{
   background:#ffffff;
+  color:#222;
 }
 
 /* ===== HEADER ===== */
@@ -28,92 +23,75 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:12px 16px;
-  background:#ffffff;
-  border-bottom:1px solid #e5e5e5;
+  padding:14px 18px;
+  border-bottom:1px solid #e6e6e6;
 }
 
-.logo img{
-  height:36px;
+.header img{
+  height:38px;
 }
 
 .menu{
   font-size:26px;
-  color:var(--blue);
+  color:#0b6fae;
 }
 
-/* ===== PAGE BACKGROUND ===== */
-.page{
-  background:var(--soft);
-  padding:12px 0;   /* خیلی کم */
+/* ===== MAIN ===== */
+.main{
+  max-width:420px;
+  margin:0 auto;
+  padding:20px 16px 0;
+}
+
+/* خط آبی نازک (سمت چپ) */
+.blue-line{
+  width:55px;
+  height:4px;
+  background:#0b6fae;
+  margin-bottom:18px;
 }
 
 /* ===== CARD ===== */
 .card{
-  max-width:420px;
-  margin:0 auto;
   background:#ffffff;
-  padding:22px;
+  padding:20px 10px;
 }
 
-/* خط آبی نازک بالای کارت */
-.card::before{
-  content:"";
-  display:block;
-  height:4px;
-  width:60px;
-  background:var(--blue);
-  margin-bottom:14px;
-}
-
-/* ===== CONTENT ===== */
+/* ===== REF ===== */
 .ref{
   text-align:center;
-  color:var(--blue);
-  font-size:18px;
-  font-weight:bold;
-  margin-bottom:18px;
+  color:#0b6fae;
+  font-size:20px;
+  font-weight:600;
+  margin-bottom:22px;
 }
 
+/* ===== PHOTO ===== */
 .photo{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 
 .photo img{
   width:150px;
   height:190px;
   object-fit:cover;
-  border:1px solid #d5d5d5;
+  border:1px solid #d9d9d9;
 }
 
+/* ===== TEXT ===== */
 .label{
   text-align:center;
-  color:var(--gray);
   font-size:13px;
+  color:#8c8c8c;
   margin-top:14px;
 }
 
 .value{
   text-align:center;
   font-size:16px;
+  color:#333;
   margin-top:4px;
-}
-
-/* ===== LOGOUT ===== */
-.logout{
-  max-width:420px;
-  margin:14px auto;
-  background:var(--blue);
-  color:#fff;
-  text-align:center;
-  padding:12px;
-  border-radius:4px;
-}
-
-/* ===== PRINT ===== */
-@media print{
-  .menu,.logout{display:none;}
 }
 </style>
 </head>
@@ -122,19 +100,20 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <div class="logo">
-    <img src="logo.jpg" alt="Pak Visa">
-  </div>
+  <img src="logo.jpg" alt="Pak Visa">
   <div class="menu">☰</div>
 </div>
 
 <!-- CONTENT -->
-<div class="page">
+<div class="main">
+
+  <div class="blue-line"></div>
+
   <div class="card">
 
     <div class="ref">
       Visa Reference Number –<br>
-      880060011480
+      88004451584
     </div>
 
     <div class="photo">
@@ -142,10 +121,10 @@ body{
     </div>
 
     <div class="label">NAME</div>
-    <div class="value">Safi Mudasir</div>
+    <div class="value">Ahmad Zai Abdul Qahir</div>
 
     <div class="label">Passport No</div>
-    <div class="value">P05926591</div>
+    <div class="value">P04382582</div>
 
     <div class="label">Passport Country</div>
     <div class="value">Afghanistan</div>
@@ -153,22 +132,8 @@ body{
     <div class="label">Visa Category</div>
     <div class="value">Tourist / Visit</div>
 
-    <div class="label">Visa Sub Category</div>
-    <div class="value">Individual (Less Than 3 Months)</div>
-
-    <div class="label">Application Type</div>
-    <div class="value">Entry</div>
-
-    <div class="label">Staying Facility</div>
-    <div class="value">Multiple Entry – Upto 1 Year</div>
-
-    <div class="label">Visa Start Date</div>
-    <div class="value">21 Dec 2025</div>
-
   </div>
 </div>
-
-<div class="logout">Logout</div>
 
 </body>
 </html>
