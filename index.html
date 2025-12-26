@@ -51,39 +51,40 @@ body{
   border-top:1px solid #eee;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD (LIKE ORIGINAL) ===== */
 .card{
   max-width:420px;
-  margin:16px auto;
+  margin:0 auto;                 /* فاصله بالا صفر */
   background:#fff;
-  padding:20px 18px;
+  padding:18px 16px;
   text-align:center;
-  border-radius:4px;
+  border-top:4px solid #1b75bc;  /* خط آبی رسمی */
 }
 
 /* Reference */
 .ref{
   color:#1b75bc;
-  font-size:20px;
-  font-weight:bold;
+  font-size:22px;
+  font-weight:600;
   line-height:1.4;
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 /* Photo */
 .photo img{
-  width:150px;
-  height:190px;
+  width:160px;
+  height:200px;
   object-fit:cover;
-  border:1px solid #ccc;
-  margin-bottom:18px;
+  border:1px solid #ddd;
+  margin-bottom:14px;
 }
 
 /* Labels */
 .label{
-  color:#8a8a8a;
-  font-size:13px;
+  color:#9a9a9a;
+  font-size:12px;
   margin-top:14px;
+  text-transform:uppercase;
 }
 
 /* Values */
@@ -91,9 +92,10 @@ body{
   font-size:16px;
   margin-top:4px;
   color:#000;
+  font-weight:500;
 }
 
-/* Logout Button */
+/* Button */
 .logout{
   max-width:420px;
   margin:18px auto;
@@ -101,7 +103,6 @@ body{
   color:#fff;
   padding:14px;
   text-align:center;
-  border-radius:4px;
   font-size:16px;
 }
 
@@ -143,7 +144,7 @@ body{
     <img src="photo.jpg" alt="Applicant Photo">
   </div>
 
-  <div class="label">NAME</div>
+  <div class="label">Name</div>
   <div class="value">Ahmad Zai Abdul Qahir</div>
 
   <div class="label">Passport No</div>
