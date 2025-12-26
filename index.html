@@ -3,203 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa – Visa Details</title>
+<title>Pak Visa</title>
 
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-/* ===== PAGE (Official Government White UI) ===== */
 body{
-  background:#ffffff;
-  color:#4f4f4f;
+  background:#f2f4f7;
 }
 
-/* ===== HEADER ===== */
-.header{
+/* HEADER */
+header{
   background:#ffffff;
-  border-bottom:1px solid #e1e1e1;
-  padding:10px 14px;
+  border-bottom:1px solid #ddd;
+  padding:10px 15px;
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
 
+.logo{
+  display:flex;
+  align-items:center;
+}
+
 .logo img{
-  height:38px;
+  height:40px;
 }
 
 .menu-btn{
-  font-size:26px;
-  color:#1f4fa3; /* رسمی */
+  font-size:22px;
   cursor:pointer;
 }
 
-/* ===== OFFICIAL VISA CARD ===== */
-.card{
-  max-width:360px;
-  margin:20px auto;
-  background:#f2f5f7; /* اصلاح شده مثل سایت اصلی */
-  border-radius:2px;
-}
-
-/* خط آبی رسمی بالا */
-.card::before{
-  content:"";
-  display:block;
-  width:60px;
-  height:4px;
-  background:#1f4fa3;
-  margin:16px;
-}
-
-/* ===== CONTENT ===== */
-.content{
-  padding:10px 20px 28px;
-  text-align:center;
-}
-
-/* Reference */
-.ref-title{
-  color:#1f4fa3;
-  font-size:18px;
-  font-weight:600;
-}
-
-.ref-number{
-  margin-top:6px;
-  font-size:24px;
-  font-weight:700;
-  color:#1f4fa3;
-}
-
-/* Divider */
-.divider{
-  height:1px;
-  background:#dcdcdc;
-  margin:18px 0;
-}
-
-/* Photo */
-.photo{
-  width:170px;
-  margin:0 auto 16px;
+/* MENU */
+nav{
+  display:none;
   background:#ffffff;
-  padding:6px;
+  border-bottom:1px solid #ddd;
 }
 
-.photo img{
-  width:100%;
+nav a{
   display:block;
+  padding:12px 15px;
+  text-decoration:none;
+  color:#333;
+  border-top:1px solid #eee;
 }
 
-/* Labels */
-.label{
-  margin-top:18px;
-  font-size:13px;
-  font-weight:700;
-  color:#8a8a8a; /* رسمی */
-  letter-spacing:0.3px;
-}
-
-/* Values */
-.value{
-  margin-top:6px;
-  font-size:16px;
-  color:#4f4f4f;
-}
-
-/* ===== FOOTER BUTTON ===== */
-.footer-btn{
-  max-width:360px;
-  margin:20px auto 30px;
+/* CONTENT */
+.container{
+  max-width:350px;
+  margin:20px auto;
+  background:#ffffff;
+  padding:20px;
+  border-radius:6px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
   text-align:center;
 }
 
-.footer-btn a{
-  display:inline-block;
-  background:#1f4fa3;
-  color:#ffffff;
-  padding:12px 26px;
-  text-decoration:none;
-  font-size:15px;
-  border-radius:2px;
+.label{
+  color:#777;
+  font-size:14px;
+  margin-top:15px;
 }
 
-/* ===== PRINT ===== */
-@media print{
-  .menu-btn,
-  .footer-btn{
-    display:none !important;
-  }
+.value{
+  font-size:16px;
+  color:#000;
+  margin-top:5px;
+}
+
+.btn{
+  margin-top:25px;
+  background:#1f4fa3;
+  color:#fff;
+  padding:12px;
+  border:none;
+  width:100%;
+  font-size:16px;
+  border-radius:4px;
+  cursor:pointer;
+}
+
+/* LOADER */
+.loader-page{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#ffffff;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+}
+
+.loader{
+  width:70px;
+  height:70px;
+  border:4px solid #cfd8e3;
+  border-top:4px solid #1f4fa3;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
 }
 </style>
 </head>
 
 <body>
 
+<!-- LOADER -->
+<div class="loader-page" id="loader">
+  <div class="loader"></div>
+</div>
+
 <!-- HEADER -->
-<div class="header">
+<header>
   <div class="logo">
-    <img src="logo.jpg" alt="Pak Visa">
+    <img src="logo.jpg" alt="Pak Visa Logo">
   </div>
-  <div class="menu-btn">☰</div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- MENU -->
+<nav id="menu">
+  <a href="#" onclick="openLink()">Home</a>
+  <a href="#" onclick="openLink()">Visa Status</a>
+  <a href="#" onclick="openLink()">Application</a>
+  <a href="#" onclick="openLink()">Logout</a>
+</nav>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="label">Application Type</div>
+  <div class="value">Entry</div>
+
+  <div class="label">Staying Facility</div>
+  <div class="value">Multiple Entry - Upto 1 Year</div>
+
+  <div class="label">Visa Start Date</div>
+  <div class="value">07 Jan 2025</div>
+
+  <div class="label">Visa End Date</div>
+  <div class="value">06 Jul 2025</div>
+
+  <div class="label">Visa Duration</div>
+  <div class="value">60 day(s)</div>
+
+  <button class="btn" onclick="openLink()">Back to Login</button>
 </div>
 
-<!-- OFFICIAL VISA CARD -->
-<div class="card">
-  <div class="content">
+<script>
+function toggleMenu(){
+  let menu = document.getElementById("menu");
+  menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
 
-    <div class="ref-title">Visa Reference Number –</div>
-    <div class="ref-number">88004451584</div>
-
-    <div class="divider"></div>
-
-    <div class="photo">
-      <img src="photo.jpg" alt="Applicant Photo">
-    </div>
-
-    <div class="label">NAME</div>
-    <div class="value">Ahmad Zai Abdul Qahir</div>
-
-    <div class="label">PASSPORT NO</div>
-    <div class="value">P04382582</div>
-
-    <div class="label">PASSPORT COUNTRY</div>
-    <div class="value">Afghanistan</div>
-
-    <div class="label">VISA CATEGORY</div>
-    <div class="value">Tourist / Visit</div>
-
-    <div class="label">VISA SUB CATEGORY</div>
-    <div class="value">Individual (Less Than 3 Months)</div>
-
-    <div class="label">APPLICATION TYPE</div>
-    <div class="value">Entry</div>
-
-    <div class="label">STAYING FACILITY</div>
-    <div class="value">Multiple Entry – Upto 1 Year</div>
-
-    <div class="label">VISA START DATE</div>
-    <div class="value">07 Jan 2025</div>
-
-    <div class="label">VISA END DATE</div>
-    <div class="value">06 Jul 2025</div>
-
-    <div class="label">VISA DURATION</div>
-    <div class="value">60 day(s)</div>
-
-  </div>
-</div>
-
-<!-- GOVERNMENT PORTAL BUTTON -->
-<div class="footer-btn">
-  <a href="#">Back to Login</a>
-</div>
+function openLink(){
+  document.getElementById("loader").style.display = "flex";
+  setTimeout(function(){
+    document.getElementById("loader").style.display = "none";
+    alert("Page Loaded");
+  },2000);
+}
+</script>
 
 </body>
 </html>
