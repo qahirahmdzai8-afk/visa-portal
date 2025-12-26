@@ -14,31 +14,30 @@
 }
 
 body{
-  background:#eeeeee;
+  background:#f2f2f2;
 }
 
 /* ===== HEADER ===== */
 .header{
   background:#ffffff;
-  padding:12px 16px;
+  padding:10px 14px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   border-bottom:1px solid #ddd;
 }
 
 .header img{
-  height:40px;
+  height:38px;
 }
 
-/* ===== MENU ICON ===== */
 .menu{
   font-size:26px;
   cursor:pointer;
 }
 
-/* ===== CONTAINER ===== */
-.container{
+/* ===== CARD WRAPPER ===== */
+.wrapper{
   max-width:420px;
   margin:20px auto;
   padding:0 10px;
@@ -46,64 +45,70 @@ body{
 
 /* ===== CARD ===== */
 .card{
-  background:#ffffff;        /* ✅ کارت سفید */
-  border-top:4px solid #1b75bc;
-  padding:24px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+  background:#ffffff;
+  padding:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.12);
 }
 
-/* ===== TITLE ===== */
+/* ===== REF NUMBER ===== */
 .ref{
   text-align:center;
-  color:#1b75bc;
-  font-size:22px;
+  color:#0a7dbd;
+  font-size:20px;
   font-weight:bold;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 
 /* ===== PHOTO ===== */
 .photo{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:16px;
 }
 
 .photo img{
-  width:180px;
+  width:150px;
   border:1px solid #ccc;
-  background:#ffffff;
+  background:#fff;
 }
 
-/* ===== INFO ===== */
+/* ===== TEXT ===== */
 .label{
-  color:#999999;
-  font-size:12px;
   margin-top:14px;
+  font-size:13px;
+  color:#777;
   text-align:center;
-  letter-spacing:1px;
 }
 
 .value{
   font-size:16px;
-  font-weight:bold;
+  color:#333;
   margin-top:4px;
   text-align:center;
-  color:#222;
 }
 
 /* ===== BUTTON ===== */
 .btn{
-  margin-top:30px;
+  margin:25px auto 5px;
   text-align:center;
 }
 
 .btn a{
-  background:#1b75bc;
-  color:#ffffff;
-  padding:12px 28px;
+  background:#0a7dbd;
+  color:#fff;
+  padding:12px 26px;
   text-decoration:none;
   font-weight:bold;
   display:inline-block;
-  border-radius:4px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#000;
+  background:#e6e6e6;
+  padding:12px;
+  margin-top:20px;
 }
 </style>
 </head>
@@ -112,16 +117,17 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <img src="logo.png" alt="Pak Visa Logo">
+  <img src="logo.jpg" alt="Pak Visa">
   <div class="menu">&#9776;</div>
 </div>
 
-<!-- CONTENT -->
-<div class="container">
+<!-- CARD -->
+<div class="wrapper">
   <div class="card">
 
     <div class="ref">
-      Visa Reference Number –<br>88004451584
+      Visa Reference Number –<br>
+      88006011480
     </div>
 
     <div class="photo">
@@ -129,28 +135,40 @@ body{
     </div>
 
     <div class="label">NAME</div>
-    <div class="value">Ahmad Zai Abdul Qahir</div>
+    <div class="value">Safi Mudasir</div>
 
-    <div class="label">PASSPORT NO</div>
-    <div class="value">P04382582</div>
+    <div class="label">Passport No</div>
+    <div class="value">P05926591</div>
 
-    <div class="label">PASSPORT COUNTRY</div>
+    <div class="label">Passport Country</div>
     <div class="value">Afghanistan</div>
 
-    <div class="label">VISA CATEGORY</div>
+    <div class="label">Visa Category</div>
     <div class="value">Tourist / Visit</div>
 
-    <div class="label">VISA SUB CATEGORY</div>
+    <div class="label">Visa Sub Category</div>
     <div class="value">Individual (Less Than 3 Months)</div>
 
-    <div class="label">APPLICATION TYPE</div>
+    <div class="label">Application Type</div>
     <div class="value">Entry</div>
+
+    <div class="label">Staying Facility</div>
+    <div class="value">Multiple Entry – Upto 1 Year</div>
+
+    <div class="label">Visa Start Date</div>
+    <div class="value">21 Dec 2025</div>
 
     <div class="btn">
       <a href="#">Back to Login</a>
     </div>
 
   </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR,<br>
+  GOVERNMENT OF PAKISTAN – V: 5.5.8
 </div>
 
 </body>
