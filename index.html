@@ -14,7 +14,7 @@
 }
 
 body{
-  background:#eef2f5;
+  background:#eef2f5;   /* آبی خیلی روشن بیرون کارت */
 }
 
 /* ===== HEADER ===== */
@@ -54,11 +54,13 @@ body{
 
 /* ===== CARD ===== */
 .card{
-  max-width:420px;
-  margin:20px auto;
-  background:#f7f9fc;              /* ❗ آبی خیلی روشن */
-  border:1px solid #cfd8ea;        /* ❗ چوکات آبی */
+  max-width:380px;
+  margin:22px auto;
+  background:#ffffff;                 /* ✅ سفید خالص */
+  border-radius:3px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.1); /* ✅ سایه رسمی */
   text-align:center;
+  padding-bottom:20px;
 }
 
 /* خط آبی بالای کارت */
@@ -68,7 +70,7 @@ body{
   height:4px;
   width:70px;
   background:#1f4fa3;
-  margin:14px auto 10px;
+  margin:14px auto 16px;
 }
 
 /* ===== CONTENT ===== */
@@ -76,20 +78,21 @@ body{
   color:#1f4fa3;
   font-size:20px;
   font-weight:bold;
-  padding:10px 15px 15px;
+  margin-bottom:18px;
 }
 
 .photo img{
   width:160px;
   height:200px;
   object-fit:cover;
-  border:1px solid #ccc;
+  border:1px solid #cfcfcf;
   background:#fff;
+  margin-bottom:12px;
 }
 
 /* ===== TEXT ===== */
 .label{
-  color:#8a8a8a;
+  color:#9a9a9a;
   font-size:13px;
   margin-top:18px;
 }
@@ -97,18 +100,18 @@ body{
 .value{
   font-size:16px;
   margin-top:4px;
-  padding-bottom:6px;
 }
 
 /* ===== LOGOUT ===== */
 .logout{
-  max-width:420px;
-  margin:14px auto;
+  max-width:380px;
+  margin:16px auto;
   background:#1f4fa3;
   color:#fff;
   padding:12px;
   text-align:center;
   cursor:pointer;
+  border-radius:3px;
 }
 
 /* ===== PRINT ===== */
