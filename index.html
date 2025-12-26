@@ -10,7 +10,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body{
@@ -22,13 +22,13 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 14px;
+  padding:12px 16px;
   background:#fff;
   border-bottom:1px solid #ddd;
 }
 
 .logo img{
-  height:52px; /* لوگو کلان‌تر شد */
+  height:56px;
   display:block;
 }
 
@@ -46,40 +46,47 @@ body{
 
 #menu a{
   display:block;
-  padding:12px;
+  padding:12px 16px;
   text-decoration:none;
   color:#000;
   border-top:1px solid #eee;
 }
 
-/* ===== CONTENT ===== */
+/* ===== CARD ===== */
 .card{
   max-width:420px;
-  margin:14px auto;
+  margin:20px auto;
   background:#fff;
-  padding:18px;
+  padding:20px 18px;
   text-align:center;
   border-radius:3px;
+}
+
+/* blue divider */
+.divider{
+  width:50px;
+  height:4px;
+  background:#0a7dbd;
+  margin:0 auto 14px;
 }
 
 .ref{
   color:#0a7dbd;
   font-size:18px;
-  font-weight:bold;
-  margin:12px 0;
+  font-weight:600;
+  margin-bottom:14px;
 }
 
 .photo img{
-  width:140px;
-  height:180px;
+  width:150px;
+  height:190px;
   object-fit:cover;
   border:1px solid #ccc;
   margin:12px 0;
 }
 
-/* ===== TEXT ===== */
 .label{
-  color:#888;
+  color:#9a9a9a;
   font-size:13px;
   margin-top:14px;
 }
@@ -87,28 +94,30 @@ body{
 .value{
   font-size:16px;
   margin-top:4px;
+  color:#222;
 }
 
-/* ===== LOGOUT (INSIDE CARD) ===== */
+/* ===== LOGOUT ===== */
 .logout{
-  margin-top:20px;
+  margin-top:22px;
   background:#0a7dbd;
   color:#fff;
-  padding:12px;
+  padding:14px;
   text-align:center;
   border-radius:3px;
   cursor:pointer;
+  font-size:16px;
 }
 
 /* ===== FOOTER ===== */
 .footer{
   text-align:center;
   font-size:12px;
-  color:#666;
-  padding:15px 10px;
+  color:#777;
+  padding:16px 10px;
 }
 
-/* ===== PRINT (PDF) ===== */
+/* ===== PRINT ===== */
 @media print{
   .menu-btn,
   #menu,
@@ -139,8 +148,10 @@ body{
 <!-- CONTENT -->
 <div class="card">
 
+  <div class="divider"></div>
+
   <div class="ref">
-    Visa Reference Number -<br>
+    Visa Reference Number<br>
     88006011480
   </div>
 
@@ -172,7 +183,6 @@ body{
   <div class="label">Visa Start Date</div>
   <div class="value">21 Dec 2025</div>
 
-  <!-- LOGOUT INSIDE -->
   <div class="logout" onclick="logout()">Logout</div>
 
 </div>
