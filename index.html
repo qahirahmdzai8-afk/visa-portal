@@ -13,10 +13,8 @@
   font-family:Arial, sans-serif;
 }
 
-/* ===== PAGE BACKGROUND (چوکات آبی روشن) ===== */
 body{
-  background:#f3f6f9;   /* آبی خیلی روشن مثل سایت اصلی */
-  color:#333;
+  background:#eef2f5;
 }
 
 /* ===== HEADER ===== */
@@ -25,17 +23,16 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:10px 14px;
-  background:#ffffff;
-  border-bottom:1px solid #e6e6e6;
+  background:#fff;
+  border-bottom:1px solid #ddd;
 }
 
 .logo img{
   height:38px;
-  display:block;
 }
 
 .menu-btn{
-  font-size:28px;
+  font-size:26px;
   color:#1f4fa3;
   cursor:pointer;
 }
@@ -43,75 +40,74 @@ body{
 /* ===== MENU ===== */
 #menu{
   display:none;
-  background:#ffffff;
-  border-bottom:1px solid #e6e6e6;
+  background:#fff;
+  border-bottom:1px solid #ddd;
 }
 
 #menu a{
   display:block;
-  padding:12px 14px;
+  padding:12px;
   text-decoration:none;
-  color:#333;
-  border-top:1px solid #f0f0f0;
+  color:#000;
+  border-top:1px solid #eee;
 }
 
-/* ===== CARD (سفید خالص) ===== */
+/* ===== CARD ===== */
 .card{
   max-width:420px;
-  margin:24px auto;
-  background:#ffffff;
-  padding:22px 16px 30px;
+  margin:20px auto;
+  background:#f7f9fc;              /* ❗ آبی خیلی روشن */
+  border:1px solid #cfd8ea;        /* ❗ چوکات آبی */
   text-align:center;
 }
 
-/* ===== BLUE LINE ===== */
-.blue-line{
-  width:55px;
+/* خط آبی بالای کارت */
+.card::before{
+  content:"";
+  display:block;
   height:4px;
+  width:70px;
   background:#1f4fa3;
-  margin:0 0 18px 0;
+  margin:14px auto 10px;
 }
 
-/* ===== REF ===== */
+/* ===== CONTENT ===== */
 .ref{
   color:#1f4fa3;
-  font-size:19px;
-  font-weight:600;
-  margin-bottom:22px;
+  font-size:20px;
+  font-weight:bold;
+  padding:10px 15px 15px;
 }
 
-/* ===== PHOTO ===== */
 .photo img{
-  width:150px;
-  height:190px;
+  width:160px;
+  height:200px;
   object-fit:cover;
-  border:1px solid #dcdcdc;
-  background:#ffffff;
-  margin-bottom:18px;
+  border:1px solid #ccc;
+  background:#fff;
 }
 
 /* ===== TEXT ===== */
 .label{
-  color:#9a9a9a;
+  color:#8a8a8a;
   font-size:13px;
-  margin-top:14px;
+  margin-top:18px;
 }
 
 .value{
   font-size:16px;
   margin-top:4px;
-  color:#444;
+  padding-bottom:6px;
 }
 
 /* ===== LOGOUT ===== */
 .logout{
   max-width:420px;
-  margin:10px auto 30px;
+  margin:14px auto;
   background:#1f4fa3;
-  color:#ffffff;
+  color:#fff;
   padding:12px;
   text-align:center;
-  border-radius:3px;
   cursor:pointer;
 }
 
@@ -146,8 +142,6 @@ body{
 <!-- CARD -->
 <div class="card">
 
-  <div class="blue-line"></div>
-
   <div class="ref">
     Visa Reference Number –<br>
     88006011480
@@ -178,9 +172,6 @@ body{
   <div class="label">Staying Facility</div>
   <div class="value">Multiple Entry – Upto 1 Year</div>
 
-  <div class="label">Visa Start Date</div>
-  <div class="value">21 Dec 2025</div>
-
 </div>
 
 <div class="logout" onclick="logout()">Logout</div>
@@ -190,7 +181,6 @@ function toggleMenu(){
   var m = document.getElementById("menu");
   m.style.display = (m.style.display === "block") ? "none" : "block";
 }
-
 function logout(){
   alert("Logged out successfully");
 }
