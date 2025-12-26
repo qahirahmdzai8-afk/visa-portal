@@ -10,11 +10,11 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-  background:#eef2f5;   /* آبی خیلی روشن بیرون کارت */
+  background:#f2f2f2;
 }
 
 /* ===== HEADER ===== */
@@ -23,30 +23,30 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:10px 14px;
-  background:#fff;
-  border-bottom:1px solid #ddd;
+  background:#ffffff;
+  border-bottom:1px solid #e0e0e0;
 }
 
 .logo img{
-  height:38px;
+  height:42px;
 }
 
 .menu-btn{
   font-size:26px;
-  color:#1f4fa3;
+  color:#0a7dbd;
   cursor:pointer;
 }
 
 /* ===== MENU ===== */
 #menu{
   display:none;
-  background:#fff;
+  background:#ffffff;
   border-bottom:1px solid #ddd;
 }
 
 #menu a{
   display:block;
-  padding:12px;
+  padding:12px 16px;
   text-decoration:none;
   color:#000;
   border-top:1px solid #eee;
@@ -54,64 +54,65 @@ body{
 
 /* ===== CARD ===== */
 .card{
-  max-width:380px;
-  margin:22px auto;
-  background:#ffffff;                 /* ✅ سفید خالص */
-  border-radius:3px;
-  box-shadow:0 1px 3px rgba(0,0,0,0.1); /* ✅ سایه رسمی */
+  max-width:420px;
+  margin:0 auto;
+  background:#ffffff;
   text-align:center;
   padding-bottom:20px;
 }
 
-/* خط آبی بالای کارت */
+/* خط آبی بالای کارت (دقیق مثل عکس) */
 .card::before{
   content:"";
   display:block;
-  height:4px;
   width:70px;
-  background:#1f4fa3;
-  margin:14px auto 16px;
+  height:4px;
+  background:#0a7dbd;
+  margin:18px auto 14px;
 }
 
-/* ===== CONTENT ===== */
+/* ===== REF NUMBER ===== */
 .ref{
-  color:#1f4fa3;
+  color:#0a7dbd;
   font-size:20px;
-  font-weight:bold;
+  font-weight:600;
+  line-height:1.5;
   margin-bottom:18px;
 }
 
+/* ===== PHOTO ===== */
 .photo img{
-  width:160px;
-  height:200px;
+  width:150px;
+  height:190px;
   object-fit:cover;
-  border:1px solid #cfcfcf;
   background:#fff;
-  margin-bottom:12px;
+  border:1px solid #d0d0d0;
+  margin-bottom:18px;
 }
 
 /* ===== TEXT ===== */
 .label{
-  color:#9a9a9a;
+  color:#8c8c8c;
   font-size:13px;
-  margin-top:18px;
+  margin-top:14px;
 }
 
 .value{
   font-size:16px;
+  color:#000;
   margin-top:4px;
 }
 
 /* ===== LOGOUT ===== */
 .logout{
-  max-width:380px;
+  max-width:420px;
   margin:16px auto;
-  background:#1f4fa3;
+  background:#0a7dbd;
   color:#fff;
-  padding:12px;
+  padding:13px;
   text-align:center;
+  font-size:15px;
   cursor:pointer;
-  border-radius:3px;
 }
 
 /* ===== PRINT ===== */
@@ -151,7 +152,7 @@ body{
   </div>
 
   <div class="photo">
-    <img src="photo.jpg" alt="Photo">
+    <img src="photo.jpg" alt="Applicant Photo">
   </div>
 
   <div class="label">NAME</div>
@@ -175,6 +176,9 @@ body{
   <div class="label">Staying Facility</div>
   <div class="value">Multiple Entry – Upto 1 Year</div>
 
+  <div class="label">Visa Start Date</div>
+  <div class="value">21 Dec 2025</div>
+
 </div>
 
 <div class="logout" onclick="logout()">Logout</div>
@@ -184,6 +188,7 @@ function toggleMenu(){
   var m = document.getElementById("menu");
   m.style.display = (m.style.display === "block") ? "none" : "block";
 }
+
 function logout(){
   alert("Logged out successfully");
 }
