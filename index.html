@@ -38,10 +38,25 @@ body{
   cursor:pointer;
 }
 
+/* ===== MENU ===== */
+.menu{
+  display:none;
+  background:#ffffff;
+  border-bottom:1px solid #e6e6e6;
+}
+
+.menu a{
+  display:block;
+  padding:14px;
+  text-decoration:none;
+  color:#4f4f4f;
+  border-top:1px solid #f2f2f2;
+}
+
 /* ===== CARD ===== */
 .card{
   max-width:360px;
-  margin:20px 14px;   /* ← فاصله راست و چپ زیاد شد */
+  margin:20px 8px;   /* ← فقط این خط اصلاح شد */
   background:#f5f6f7;
 }
 
@@ -105,28 +120,21 @@ body{
   color:#6a6a6a;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== BUTTON ===== */
 .footer-btn{
   max-width:360px;
-  margin:20px 14px 40px;
+  margin:22px auto 34px;
   text-align:center;
 }
 
 .footer-btn a{
-  display:block;
+  display:inline-block;
   background:#1f4fa3;
   color:#ffffff;
-  padding:12px;
-  font-size:15px;
+  padding:10px 22px;   /* ← فقط این اصلاح شد */
+  font-size:14px;      /* ← فقط این */
   text-decoration:none;
   border-radius:2px;
-  margin-bottom:10px;
-}
-
-.logout-btn{
-  background:#ffffff;
-  color:#1f4fa3;
-  border:1px solid #1f4fa3;
 }
 </style>
 </head>
@@ -138,7 +146,14 @@ body{
   <div class="logo">
     <img src="logo.jpg" alt="Pak Visa">
   </div>
-  <div class="menu-btn">☰</div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+  <a href="#">Home</a>
+  <a href="#">Visa Status</a>
+  <a href="#">Logout</a>
 </div>
 
 <!-- CARD -->
@@ -187,11 +202,16 @@ body{
   </div>
 </div>
 
-<!-- BUTTONS INSIDE PAGE -->
 <div class="footer-btn">
   <a href="#">Back to Login</a>
-  <a href="#" class="logout-btn">Logout</a>
 </div>
+
+<script>
+function toggleMenu(){
+  const m = document.getElementById("menu");
+  m.style.display = m.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
