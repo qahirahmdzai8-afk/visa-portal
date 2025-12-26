@@ -1,9 +1,9 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa – Visa Details</title>
+<title>Pak Visa – Official Visa Layout</title>
 
 <style>
 *{
@@ -16,62 +16,52 @@
 body{
   background:#ffffff;
   color:#4f4f4f;
-  padding:0 14px;   /* ✅ فاصله راست و چپ صفحه زیاد شد */
+  padding:0 22px; /* ✅ فاصله راست و چپ زیاد شد */
 }
 
 /* ===== HEADER ===== */
 .header{
   background:#ffffff;
   border-bottom:1px solid #e1e1e1;
-  padding:10px 16px;   /* ✅ راست و چپ زیاد شد */
+  padding:12px 22px;
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
 
 .logo img{
-  height:38px;
+  height:42px;
 }
 
 .menu-btn{
-  font-size:26px;
+  font-size:28px;
   color:#1f4fa3;
   cursor:pointer;
 }
 
-/* ===== MENU ===== */
-.menu{
-  display:none;
-  background:#ffffff;
-  border-bottom:1px solid #e1e1e1;
-}
-
-.menu a{
-  display:block;
-  padding:14px 16px;  /* ✅ راست و چپ زیاد شد */
-  text-decoration:none;
-  color:#4f4f4f;
-  border-top:1px solid #f0f0f0;
-}
-
 /* ===== CARD ===== */
 .card{
-  max-width:360px;
-  margin:20px auto;
+  max-width:380px;
+  margin:26px auto;
   background:#f2f5f7;
   border-radius:2px;
   position:relative;
   overflow:hidden;
 }
 
-/* خط آبی بالا */
-.card::before{
-  content:"";
-  display:block;
-  width:60px;
+/* خط آبی مثل سایت رسمی */
+.top-line{
+  width:70px;
   height:4px;
   background:#1f4fa3;
-  margin:16px;
+  margin:18px;
+}
+
+.content{
+  padding:12px 26px 26px;
+  text-align:center;
+  position:relative;
+  z-index:1;
 }
 
 /* Back Logo */
@@ -81,30 +71,23 @@ body{
   top:50%;
   left:50%;
   transform:translate(-50%, -50%);
-  width:220px;
-  height:220px;
+  width:240px;
+  height:240px;
   background:url("logo.jpg") no-repeat center;
   background-size:contain;
-  opacity:0.07;
+  opacity:0.06;
   z-index:0;
-}
-
-.content{
-  padding:10px 20px 28px;
-  text-align:center;
-  position:relative;
-  z-index:1;
 }
 
 .ref-title{
   color:#1f4fa3;
-  font-size:18px;
+  font-size:19px;
   font-weight:600;
 }
 
 .ref-number{
-  margin-top:6px;
-  font-size:24px;
+  margin-top:8px;
+  font-size:26px;
   font-weight:700;
   color:#1f4fa3;
 }
@@ -112,12 +95,12 @@ body{
 .divider{
   height:1px;
   background:#dcdcdc;
-  margin:18px 0;
+  margin:20px 0;
 }
 
 .photo{
-  width:170px;
-  margin:0 auto 16px;
+  width:190px;
+  margin:0 auto 18px;
   background:#ffffff;
   padding:6px;
 }
@@ -127,7 +110,7 @@ body{
 }
 
 .label{
-  margin-top:18px;
+  margin-top:20px;
   font-size:13px;
   font-weight:700;
   color:#8a8a8a;
@@ -139,18 +122,16 @@ body{
   color:#4f4f4f;
 }
 
-/* ===== FOOTER BUTTON ===== */
-.footer-btn{
-  max-width:360px;
-  margin:20px auto 30px;
-  text-align:center;
+/* Back to Login داخل صفحه */
+.back-btn{
+  margin-top:26px;
 }
 
-.footer-btn a{
-  display:block;
+.back-btn a{
+  display:inline-block;
   background:#1f4fa3;
   color:#ffffff;
-  padding:12px;
+  padding:12px 30px;
   text-decoration:none;
   font-size:15px;
   border-radius:2px;
@@ -194,20 +175,19 @@ body{
 
 <div id="app">
 
+<!-- HEADER -->
 <div class="header">
   <div class="logo">
     <img src="logo.jpg" alt="Pak Visa">
   </div>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <div class="menu-btn">☰</div>
 </div>
 
-<div class="menu" id="menu">
-  <a href="#" onclick="reloadPage()">Home</a>
-  <a href="#" onclick="reloadPage()">Visa Status</a>
-  <a href="#" onclick="reloadPage()">Logout</a>
-</div>
-
+<!-- CARD -->
 <div class="card">
+
+  <div class="top-line"></div>
+
   <div class="content">
 
     <div class="ref-title">Visa Reference Number –</div>
@@ -218,6 +198,15 @@ body{
     <div class="photo">
       <img src="photo.jpg">
     </div>
+
+    <div class="label">NAME</div>
+    <div class="value">Ahmad Zai Abdul Qahir</div>
+
+    <div class="label">PASSPORT NO</div>
+    <div class="value">P04382582</div>
+
+    <div class="label">PASSPORT COUNTRY</div>
+    <div class="value">Afghanistan</div>
 
     <div class="label">APPLICATION TYPE</div>
     <div class="value">Entry</div>
@@ -234,30 +223,16 @@ body{
     <div class="label">VISA DURATION</div>
     <div class="value">60 day(s)</div>
 
-  </div>
-</div>
+    <div class="back-btn">
+      <a href="#">Back to Login</a>
+    </div>
 
-<div class="footer-btn">
-  <a href="#" onclick="reloadPage()">Back to Login</a>
+  </div>
 </div>
 
 </div>
 
 <script>
-function toggleMenu(){
-  const m=document.getElementById("menu");
-  m.style.display = m.style.display==="block" ? "none":"block";
-}
-
-function reloadPage(){
-  document.getElementById("app").style.display="none";
-  document.getElementById("loader").style.display="flex";
-  setTimeout(()=>{
-    document.getElementById("loader").style.display="none";
-    document.getElementById("app").style.display="block";
-  },2000);
-}
-
 setTimeout(()=>{
   document.getElementById("loader").style.display="none";
   document.getElementById("app").style.display="block";
