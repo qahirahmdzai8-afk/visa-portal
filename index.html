@@ -40,24 +40,33 @@ body{
   cursor:pointer;
 }
 
-/* ===== OFFICIAL MENU (مثل سایت اصلی) ===== */
+/* ===== MENU DROPDOWN (Official Style) ===== */
 .menu{
-  display:none;
+  position:absolute;
+  top:60px;
+  right:22px;
   background:#ffffff;
-  border-bottom:1px solid #e1e1e1;
+  border:1px solid #e1e1e1;
+  width:180px;
+  display:none;
+  z-index:1000;
 }
 
 .menu a{
   display:block;
-  padding:14px 22px;
+  padding:12px 16px;
+  color:#1f4fa3;
   text-decoration:none;
-  color:#4f4f4f;
   font-size:15px;
-  border-top:1px solid #f0f0f0;
+  border-bottom:1px solid #f0f0f0;
+}
+
+.menu a:last-child{
+  border-bottom:none;
 }
 
 .menu a:hover{
-  background:#f5f7fa;
+  background:#f4f7fb;
 }
 
 /* ===== CARD ===== */
@@ -70,7 +79,6 @@ body{
   overflow:hidden;
 }
 
-/* خط آبی */
 .top-line{
   position:absolute;
   top:14px;
@@ -80,7 +88,6 @@ body{
   background:#1f4fa3;
 }
 
-/* محتوا */
 .content{
   padding:28px 26px 26px;
   text-align:center;
@@ -88,7 +95,6 @@ body{
   z-index:1;
 }
 
-/* Back Logo */
 .card::after{
   content:"";
   position:absolute;
@@ -143,7 +149,6 @@ body{
 .value{
   margin-top:6px;
   font-size:16px;
-  color:#4f4f4f;
 }
 
 .back-btn{
@@ -184,43 +189,35 @@ body{
   to{transform:rotate(360deg);}
 }
 
-#app{
-  display:none;
-}
+#app{display:none;}
 </style>
 </head>
 
 <body>
 
-<!-- LOADER -->
 <div class="loader-bg" id="loader">
   <div class="loader"></div>
 </div>
 
 <div id="app">
 
-<!-- HEADER -->
 <div class="header">
   <div class="logo">
-    <img src="logo.jpg" alt="Pak Visa">
+    <img src="logo.jpg">
   </div>
+
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="https://visa.nadra.gov.pk" target="_blank">Apply Visa</a>
+  </div>
 </div>
 
-<!-- OFFICIAL MENU -->
-<div class="menu" id="menu">
-  <a href="#">Home</a>
-  <a href="#">Visa Status</a>
-  <a href="#">Apply Visa</a>
-  <a href="login.html">Back to Login</a>
-</div>
-
-<!-- CARD -->
 <div class="card">
   <div class="top-line"></div>
 
   <div class="content">
-
     <div class="ref-title">Visa Reference Number –</div>
     <div class="ref-number">88004451584</div>
 
@@ -255,26 +252,23 @@ body{
     <div class="value">60 day(s)</div>
 
     <div class="back-btn">
-      <a href="login.html">Back to Login</a>
+      <a href="index.html">Back to Login</a>
     </div>
-
   </div>
 </div>
 
 </div>
 
 <script>
-/* Loader */
+function toggleMenu(){
+  const m=document.getElementById("menu");
+  m.style.display = m.style.display==="block" ? "none" : "block";
+}
+
 setTimeout(()=>{
   document.getElementById("loader").style.display="none";
   document.getElementById("app").style.display="block";
 },2000);
-
-/* Official Menu Toggle */
-function toggleMenu(){
-  const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
 </script>
 
 </body>
