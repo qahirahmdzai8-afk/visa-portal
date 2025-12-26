@@ -14,7 +14,7 @@
 }
 
 body{
-  background:#f3f3f3;
+  background:#efefef;
 }
 
 /* ===== HEADER ===== */
@@ -22,43 +22,41 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 14px;
+  padding:12px 16px;
   background:#fff;
   border-bottom:1px solid #ddd;
 }
 
 .logo img{
-  height:42px;
+  height:40px;
 }
 
 .menu-btn{
   font-size:26px;
-  cursor:pointer;
 }
 
-/* ===== MENU ===== */
-#menu{
-  display:none;
-  background:#fff;
-  border-bottom:1px solid #ddd;
-}
-
-#menu a{
-  display:block;
-  padding:14px;
-  text-decoration:none;
-  color:#000;
-  border-top:1px solid #eee;
-}
-
-/* ===== CARD (LIKE ORIGINAL) ===== */
-.card{
+/* ===== MAIN WRAP ===== */
+.wrap{
   max-width:420px;
-  margin:0 auto;                 /* فاصله بالا صفر */
-  background:#fff;
-  padding:18px 16px;
+  margin:14px auto;
+  background:#f7f7f7;
+  padding-bottom:20px;
+}
+
+/* blue line */
+.top-line{
+  width:60px;
+  height:4px;
+  background:#1b75bc;
+  margin:14px 0 18px 14px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:#f9f9f9;
+  margin:0 14px;
+  padding:22px 16px 26px;
   text-align:center;
-  border-top:4px solid #1b75bc;  /* خط آبی رسمی */
 }
 
 /* Reference */
@@ -67,50 +65,46 @@ body{
   font-size:22px;
   font-weight:600;
   line-height:1.4;
-  margin-bottom:14px;
+  margin-bottom:18px;
 }
 
 /* Photo */
 .photo img{
-  width:160px;
-  height:200px;
+  width:170px;
+  height:215px;
   object-fit:cover;
-  border:1px solid #ddd;
-  margin-bottom:14px;
+  background:#fff;
+  margin-bottom:22px;
 }
 
-/* Labels */
+/* Label */
 .label{
-  color:#9a9a9a;
-  font-size:12px;
-  margin-top:14px;
-  text-transform:uppercase;
+  color:#8e8e8e;
+  font-size:13px;
+  margin-top:20px;
 }
 
-/* Values */
+/* Value */
 .value{
+  color:#555;
   font-size:16px;
-  margin-top:4px;
-  color:#000;
-  font-weight:500;
+  margin-top:6px;
 }
 
-/* Button */
+/* ===== BUTTON ===== */
 .logout{
   max-width:420px;
-  margin:18px auto;
+  margin:16px auto;
   background:#1b75bc;
   color:#fff;
-  padding:14px;
   text-align:center;
+  padding:14px;
   font-size:16px;
 }
 
 /* PRINT */
 @media print{
-  .menu-btn, #menu, .logout{
-    display:none;
-  }
+  .menu-btn,.logout{display:none;}
 }
 </style>
 </head>
@@ -120,70 +114,52 @@ body{
 <!-- HEADER -->
 <div class="header">
   <div class="logo">
-    <img src="logo.jpg" alt="Pak Visa">
+    <img src="logo.jpg">
   </div>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <div class="menu-btn">☰</div>
 </div>
 
-<!-- MENU -->
-<div id="menu">
-  <a href="#">Home</a>
-  <a href="#">Visa Status</a>
-  <a href="#">Contact</a>
-</div>
+<!-- CONTENT -->
+<div class="wrap">
 
-<!-- CARD -->
-<div class="card">
+  <div class="top-line"></div>
 
-  <div class="ref">
-    Visa Reference Number –<br>
-    88004451584
+  <div class="card">
+
+    <div class="ref">
+      Visa Reference Number –<br>
+      88004451584
+    </div>
+
+    <div class="photo">
+      <img src="photo.jpg">
+    </div>
+
+    <div class="label">NAME</div>
+    <div class="value">Ahmad Zai Abdul Qahir</div>
+
+    <div class="label">Passport No</div>
+    <div class="value">P04382582</div>
+
+    <div class="label">Passport Country</div>
+    <div class="value">Afghanistan</div>
+
+    <div class="label">Visa Category</div>
+    <div class="value">Tourist / Visit</div>
+
+    <div class="label">Visa Sub Category</div>
+    <div class="value">Individual (Less Than 3 Months)</div>
+
+    <div class="label">Application Type</div>
+    <div class="value">Entry</div>
+
+    <div class="label">Staying Facility</div>
+    <div class="value">Multiple Entry – Upto 1 Year</div>
+
   </div>
-
-  <div class="photo">
-    <img src="photo.jpg" alt="Applicant Photo">
-  </div>
-
-  <div class="label">Name</div>
-  <div class="value">Ahmad Zai Abdul Qahir</div>
-
-  <div class="label">Passport No</div>
-  <div class="value">P04382582</div>
-
-  <div class="label">Passport Country</div>
-  <div class="value">Afghanistan</div>
-
-  <div class="label">Visa Category</div>
-  <div class="value">Tourist / Visit</div>
-
-  <div class="label">Visa Sub Category</div>
-  <div class="value">Individual (Less Than 3 Months)</div>
-
-  <div class="label">Application Type</div>
-  <div class="value">Entry</div>
-
-  <div class="label">Staying Facility</div>
-  <div class="value">Multiple Entry – Upto 1 Year</div>
-
-  <div class="label">Visa Start Date</div>
-  <div class="value">07 Jan 2025</div>
-
-  <div class="label">Visa End Date</div>
-  <div class="value">06 Jul 2025</div>
-
-  <div class="label">Visa Duration</div>
-  <div class="value">60 day(s)</div>
-
 </div>
 
 <div class="logout">Back to Login</div>
-
-<script>
-function toggleMenu(){
-  var m = document.getElementById("menu");
-  m.style.display = (m.style.display === "block") ? "none" : "block";
-}
-</script>
 
 </body>
 </html>
