@@ -7,48 +7,22 @@
 
 <style>
 *{
-  margin:0;
-  padding:0;
   box-sizing:border-box;
-  font-family:Arial, sans-serif;
 }
 
 body{
-  background:#f4f4f4;
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f2f2f2;
 }
 
-/* ===== LOADING ===== */
-#loading{
-  position:fixed;
-  inset:0;
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-}
-
-.spinner{
-  width:70px;
-  height:70px;
-  border:6px solid #e0e0e0;
-  border-top:6px solid #1e73be;
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-  0%{transform:rotate(0deg)}
-  100%{transform:rotate(360deg)}
-}
-
-/* ===== HEADER ===== */
+/* HEADER */
 .header{
   background:#fff;
   display:flex;
-  justify-content:space-between;
   align-items:center;
-  padding:10px 14px;
+  justify-content:space-between;
+  padding:12px 15px;
   border-bottom:1px solid #ddd;
 }
 
@@ -58,18 +32,22 @@ body{
 }
 
 .logo-box img{
-  height:42px;
-  margin-right:8px;
+  height:40px;
+  margin-right:10px;
+}
+
+.logo-text{
+  line-height:1.1;
 }
 
 .logo-text strong{
+  font-size:15px;
   display:block;
-  font-size:16px;
 }
 
 .logo-text span{
-  font-size:12px;
-  color:#555;
+  font-size:11px;
+  color:#666;
 }
 
 .menu{
@@ -78,64 +56,51 @@ body{
   color:#000;
 }
 
-/* ===== CONTENT ===== */
+/* CONTENT */
 .container{
   max-width:420px;
-  margin:18px auto;
+  margin:20px auto;
   background:#fff;
-  padding:18px;
+  padding:20px 15px;
   text-align:center;
 }
 
 .container h2{
+  margin:0;
   font-size:18px;
-  margin-bottom:4px;
+  font-weight:600;
 }
 
 .container h1{
+  margin:6px 0 15px;
   font-size:28px;
-  margin-bottom:14px;
+  font-weight:700;
 }
 
-/* ===== PHOTO ===== */
 .profile{
-  width:140px;
-  height:180px;
-  object-fit:cover;
+  width:150px;
   border:1px solid #ccc;
-  padding:3px;
-  margin:10px auto 14px;
+  margin:10px auto 20px;
   display:block;
 }
 
-/* ===== INFO ===== */
 .info p{
-  margin:6px 0;
-  font-size:15px;
+  margin:12px 0;
+  font-size:16px;
 }
 
 .info span{
   display:block;
-  font-size:12px;
+  font-size:13px;
   color:#777;
+  margin-bottom:3px;
 }
 
-/* ===== BUTTON ===== */
-button{
-  width:100%;
-  padding:12px;
-  margin-top:18px;
-  background:#1e73be;
-  color:#fff;
-  border:none;
-  font-size:16px;
-  cursor:pointer;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
-  margin:22px 10px;
-  font-size:12px;
+  margin:25px 0 10px;
+  padding:10px;
+  font-size:11px;
   text-align:center;
   color:#444;
 }
@@ -144,15 +109,10 @@ footer{
 
 <body>
 
-<!-- LOADING -->
-<div id="loading">
-  <div class="spinner"></div>
-</div>
-
 <!-- HEADER -->
 <div class="header">
   <div class="logo-box">
-    <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg" alt="Pak Visa">
+    <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg">
     <div class="logo-text">
       <strong>Pak Visa</strong>
       <span>Islamic Republic of Pakistan</span>
@@ -167,7 +127,7 @@ footer{
   <h2>Visa Reference Number</h2>
   <h1>88006011480</h1>
 
-  <img class="profile" src="https://i.ibb.co/vCL5VSpn/photo.jpg" alt="Photo">
+  <img class="profile" src="https://i.ibb.co/vCL5VSpn/photo.jpg">
 
   <div class="info">
     <p><span>Name</span>Safi Mudasir</p>
@@ -182,21 +142,12 @@ footer{
     <p><span>Visa Duration</span>60 day(s)</p>
   </div>
 
-  <button>Back to Login</button>
-
 </div>
 
+<!-- FOOTER -->
 <footer>
 COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR, GOVERNMENT OF PAKISTAN – V: 5.5.8
 </footer>
-
-<script>
-window.onload = function(){
-  setTimeout(function(){
-    document.getElementById("loading").style.display="none";
-  },2000);
-};
-</script>
 
 </body>
 </html>
