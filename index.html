@@ -36,24 +36,26 @@ body{
   cursor:pointer;
 }
 
-/* ===== CARD WRAPPER ===== */
+/* ===== WRAPPER (NO GAP) ===== */
 .wrapper{
   max-width:420px;
-  margin:20px auto;
+  margin:0 auto;          /* فاصله بالا صفر */
   padding:0 10px;
+  background:#ffffff;     /* اول سفید */
 }
 
 /* ===== CARD ===== */
 .card{
   background:#ffffff;
   padding:20px;
+  border-top:4px solid #1f4fa3;   /* آبی رسمی */
   box-shadow:0 4px 12px rgba(0,0,0,0.12);
 }
 
 /* ===== REF NUMBER ===== */
 .ref{
   text-align:center;
-  color:#0a7dbd;
+  color:#1f4fa3;          /* آبی رسمی */
   font-size:20px;
   font-weight:bold;
   margin-bottom:18px;
@@ -68,7 +70,7 @@ body{
 .photo img{
   width:150px;
   border:1px solid #ccc;
-  background:#fff;
+  background:#ffffff;
 }
 
 /* ===== TEXT ===== */
@@ -93,8 +95,8 @@ body{
 }
 
 .btn a{
-  background:#0a7dbd;
-  color:#fff;
+  background:#1f4fa3;     /* آبی رسمی */
+  color:#ffffff;
   padding:12px 26px;
   text-decoration:none;
   font-weight:bold;
