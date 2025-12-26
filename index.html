@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa – Application Status</title>
+<title>Pak Visa</title>
 
 <style>
 *{
@@ -17,46 +17,19 @@ body{
   background:#f2f2f2;
 }
 
-/* ===== LOADER ===== */
-#loader{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:#fff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:9999;
-}
-
-.spinner{
-  width:80px;
-  height:80px;
-  border:6px solid #e0e0e0;
-  border-top:6px solid #0a7dbd;
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-  0%{transform:rotate(0deg);}
-  100%{transform:rotate(360deg);}
-}
-
 /* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:10px 14px;
-  background:#fff;
+  background:#ffffff;
   border-bottom:1px solid #ddd;
 }
 
 .logo img{
   height:42px;
+  display:block;
 }
 
 .menu-btn{
@@ -67,7 +40,7 @@ body{
 /* ===== MENU ===== */
 #menu{
   display:none;
-  background:#fff;
+  background:#ffffff;
   border-bottom:1px solid #ddd;
 }
 
@@ -79,46 +52,40 @@ body{
   border-top:1px solid #eee;
 }
 
-/* ===== CARD ===== */
+/* ===== CONTENT ===== */
 .card{
   max-width:420px;
-  margin:15px auto;
-  background:#fff;
-  padding:20px;
+  margin:0 auto;
+  background:#ffffff;
+  padding:18px;
   text-align:center;
 }
 
-.ref-title{
-  font-size:20px;
-  font-weight:bold;
-}
-
-.ref-number{
+.ref{
   font-size:22px;
   font-weight:bold;
-  margin-top:6px;
+  margin:15px 0 20px;
 }
 
-/* ===== PHOTO ===== */
 .photo img{
-  width:150px;
-  height:190px;
+  width:140px;
+  height:180px;
   object-fit:cover;
   border:1px solid #ccc;
-  margin:15px 0;
+  margin:10px 0 20px;
 }
 
 /* ===== TEXT ===== */
 .label{
-  color:#777;
-  font-size:14px;
-  margin-top:12px;
+  color:#888;
+  font-size:13px;
+  margin-top:14px;
 }
 
 .value{
-  font-size:17px;
+  font-size:16px;
   font-weight:bold;
-  margin-top:3px;
+  margin-top:4px;
 }
 
 /* ===== LOGOUT ===== */
@@ -127,14 +94,13 @@ body{
   margin:15px auto;
   background:#0a7dbd;
   color:#fff;
-  padding:14px;
+  padding:12px;
   text-align:center;
-  border-radius:4px;
-  font-size:16px;
+  border-radius:3px;
   cursor:pointer;
 }
 
-/* ===== PRINT (PDF) ===== */
+/* ===== PRINT ===== */
 @media print{
   .menu-btn,
   #menu,
@@ -146,11 +112,6 @@ body{
 </head>
 
 <body>
-
-<!-- LOADER -->
-<div id="loader">
-  <div class="spinner"></div>
-</div>
 
 <!-- HEADER -->
 <div class="header">
@@ -170,11 +131,13 @@ body{
 <!-- CONTENT -->
 <div class="card">
 
-  <div class="ref-title">Visa Reference Number</div>
-  <div class="ref-number">88006011480</div>
+  <div class="ref">
+    Visa Reference Number<br>
+    88006011480
+  </div>
 
   <div class="photo">
-    <img src="photo.jpg" alt="Applicant Photo">
+    <img src="photo.jpg" alt="Photo">
   </div>
 
   <div class="label">Name</div>
@@ -214,12 +177,6 @@ function toggleMenu(){
 
 function logout(){
   alert("Logged out successfully");
-}
-
-window.onload = function(){
-  setTimeout(function(){
-    document.getElementById("loader").style.display = "none";
-  }, 1500);
 }
 </script>
 
