@@ -7,14 +7,39 @@
 
 <style>
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
   font-family:Arial, sans-serif;
 }
 
 body{
   background:#f4f4f4;
+}
+
+/* ===== LOADING ===== */
+#loading{
+  position:fixed;
+  inset:0;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.spinner{
+  width:70px;
+  height:70px;
+  border:6px solid #e0e0e0;
+  border-top:6px solid #1e73be;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg)}
+  100%{transform:rotate(360deg)}
 }
 
 /* ===== HEADER ===== */
@@ -49,14 +74,14 @@ body{
 
 .menu{
   font-size:26px;
-  color:#000;
   text-decoration:none;
+  color:#000;
 }
 
 /* ===== CONTENT ===== */
 .container{
   max-width:420px;
-  margin:20px auto;
+  margin:18px auto;
   background:#fff;
   padding:18px;
   text-align:center;
@@ -64,12 +89,12 @@ body{
 
 .container h2{
   font-size:18px;
-  font-weight:600;
+  margin-bottom:4px;
 }
 
 .container h1{
   font-size:28px;
-  margin:8px 0 15px;
+  margin-bottom:14px;
 }
 
 /* ===== PHOTO ===== */
@@ -78,16 +103,15 @@ body{
   height:180px;
   object-fit:cover;
   border:1px solid #ccc;
-  padding:4px;
-  background:#fff;
+  padding:3px;
+  margin:10px auto 14px;
   display:block;
-  margin:10px auto 15px;
 }
 
 /* ===== INFO ===== */
 .info p{
   margin:6px 0;
-  line-height:1.4;
+  font-size:15px;
 }
 
 .info span{
@@ -96,25 +120,21 @@ body{
   color:#777;
 }
 
-.info p{
-  font-size:15px;
-}
-
 /* ===== BUTTON ===== */
 button{
   width:100%;
   padding:12px;
+  margin-top:18px;
   background:#1e73be;
   color:#fff;
   border:none;
   font-size:16px;
-  margin-top:20px;
   cursor:pointer;
 }
 
 /* ===== FOOTER ===== */
 footer{
-  margin:25px 10px;
+  margin:22px 10px;
   font-size:12px;
   text-align:center;
   color:#444;
@@ -123,6 +143,11 @@ footer{
 </head>
 
 <body>
+
+<!-- LOADING -->
+<div id="loading">
+  <div class="spinner"></div>
+</div>
 
 <!-- HEADER -->
 <div class="header">
@@ -161,10 +186,17 @@ footer{
 
 </div>
 
-<!-- FOOTER -->
 <footer>
 COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR, GOVERNMENT OF PAKISTAN – V: 5.5.8
 </footer>
+
+<script>
+window.onload = function(){
+  setTimeout(function(){
+    document.getElementById("loading").style.display="none";
+  },2000);
+};
+</script>
 
 </body>
 </html>
