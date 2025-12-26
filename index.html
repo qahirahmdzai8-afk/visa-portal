@@ -2,69 +2,83 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa</title>
+<title>Pak Visa – Application</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    text-align: center;
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    border-bottom: 1px solid #ddd;
+/* Header */
+.header{
+    background:#ffffff;
+    border-bottom:1px solid #ddd;
+    padding:10px 15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.header img {
-    height: 40px;
+.header img{
+    height:40px;
 }
 
-.menu {
-    font-size: 26px;
+.menu{
+    font-size:24px;
 }
 
-.container {
-    padding: 15px;
+/* Main Card */
+.card{
+    max-width:420px;
+    background:#ffffff;
+    margin:20px auto;
+    padding:20px;
+    text-align:center;
+    border-radius:6px;
 }
 
-.photo {
-    width: 160px;
-    border: 1px solid #ccc;
-    margin: 10px auto;
+/* Photo */
+.photo{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border:1px solid #ccc;
+    margin:15px auto;
 }
 
-.label {
-    color: #888;
-    font-size: 14px;
-    margin-top: 12px;
+/* Text */
+.label{
+    color:#888;
+    font-size:14px;
+    margin-top:12px;
 }
 
-.value {
-    font-size: 18px;
-    font-weight: bold;
+.value{
+    font-size:18px;
+    font-weight:bold;
+    margin-top:3px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- Header -->
 <div class="header">
-    <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg" alt="logo">
+    <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg" alt="Pak Visa Logo">
     <div class="menu">☰</div>
 </div>
 
-<div class="container">
-    <h2>Visa Reference Number</h2>
-    <h1>88006011480</h1>
+<!-- Content -->
+<div class="card">
 
-    <img class="photo" src="https://i.ibb.co/vCL5VSpn/photo.jpg" alt="photo">
+    <div class="label">Visa Reference Number</div>
+    <div class="value">88006011480</div>
+
+    <img class="photo" src="https://i.ibb.co/vCL5VSpn/photo.jpg" alt="Photo">
 
     <div class="label">Name</div>
     <div class="value">Safi Mudasir</div>
@@ -86,6 +100,7 @@ body {
 
     <div class="label">Staying Facility</div>
     <div class="value">Multiple Entry – Up to 1 Year</div>
+
 </div>
 
 </body>
