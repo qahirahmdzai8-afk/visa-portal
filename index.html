@@ -2,107 +2,62 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Pak Visa – Visa Status</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pak Visa</title>
 
 <style>
-*{
-  box-sizing:border-box;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
 }
 
-body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  background:#f2f2f2;
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #ddd;
 }
 
-/* HEADER */
-.header{
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:12px 15px;
-  border-bottom:1px solid #ddd;
+/* LOGO */
+.header img {
+  height: 45px;
 }
 
-.logo-box{
-  display:flex;
-  align-items:center;
+/* MENU */
+.menu {
+  font-size: 28px;
+  cursor: pointer;
 }
 
-.logo-box img{
-  height:40px;
-  margin-right:10px;
+/* ===== CONTENT ===== */
+.container {
+  text-align: center;
+  padding: 20px;
 }
 
-.logo-text{
-  line-height:1.1;
+.ref {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 20px;
 }
 
-.logo-text strong{
-  font-size:15px;
-  display:block;
+.photo {
+  width: 220px;
+  border: 1px solid #ccc;
+  margin: 0 auto 20px;
 }
 
-.logo-text span{
-  font-size:11px;
-  color:#666;
+.label {
+  color: #777;
+  font-size: 14px;
 }
 
-.menu{
-  font-size:26px;
-  text-decoration:none;
-  color:#000;
-}
-
-/* CONTENT */
-.container{
-  max-width:420px;
-  margin:20px auto;
-  background:#fff;
-  padding:20px 15px;
-  text-align:center;
-}
-
-.container h2{
-  margin:0;
-  font-size:18px;
-  font-weight:600;
-}
-
-.container h1{
-  margin:6px 0 15px;
-  font-size:28px;
-  font-weight:700;
-}
-
-.profile{
-  width:150px;
-  border:1px solid #ccc;
-  margin:10px auto 20px;
-  display:block;
-}
-
-.info p{
-  margin:12px 0;
-  font-size:16px;
-}
-
-.info span{
-  display:block;
-  font-size:13px;
-  color:#777;
-  margin-bottom:3px;
-}
-
-/* FOOTER */
-footer{
-  margin:25px 0 10px;
-  padding:10px;
-  font-size:11px;
-  text-align:center;
-  color:#444;
+.value {
+  font-size: 18px;
+  margin-bottom: 12px;
 }
 </style>
 </head>
@@ -111,43 +66,34 @@ footer{
 
 <!-- HEADER -->
 <div class="header">
-  <div class="logo-box">
-    <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg">
-    <div class="logo-text">
-      <strong>Pak Visa</strong>
-      <span>Islamic Republic of Pakistan</span>
-    </div>
-  </div>
-  <a href="#" class="menu">&#9776;</a>
+  <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg" alt="Pak Visa Logo">
+  <div class="menu">&#9776;</div>
 </div>
 
 <!-- CONTENT -->
 <div class="container">
 
-  <h2>Visa Reference Number</h2>
-  <h1>88006011480</h1>
+  <div class="label">Visa Reference Number</div>
+  <div class="ref">88006011480</div>
 
-  <img class="profile" src="https://i.ibb.co/vCL5VSpn/photo.jpg">
+  <img src="https://i.ibb.co/8nfXXXX/photo.jpg" class="photo">
 
-  <div class="info">
-    <p><span>Name</span>Safi Mudasir</p>
-    <p><span>Passport No</span>P05926591</p>
-    <p><span>Passport Country</span>Afghanistan</p>
-    <p><span>Visa Category</span>Tourist / Visit</p>
-    <p><span>Visa Sub Category</span>Individual (Less Than 3 Months)</p>
-    <p><span>Application Type</span>Entry</p>
-    <p><span>Staying Facility</span>Multiple Entry – Up to 1 Year</p>
-    <p><span>Visa Start Date</span>07 Jan 2025</p>
-    <p><span>Visa End Date</span>06 Jul 2025</p>
-    <p><span>Visa Duration</span>60 day(s)</p>
-  </div>
+  <div class="label">Name</div>
+  <div class="value">Safi Mudasir</div>
+
+  <div class="label">Passport No</div>
+  <div class="value">P05926591</div>
+
+  <div class="label">Passport Country</div>
+  <div class="value">Afghanistan</div>
+
+  <div class="label">Visa Category</div>
+  <div class="value">Tourist / Visit</div>
+
+  <div class="label">Visa Duration</div>
+  <div class="value">60 day(s)</div>
 
 </div>
-
-<!-- FOOTER -->
-<footer>
-COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR, GOVERNMENT OF PAKISTAN – V: 5.5.8
-</footer>
 
 </body>
 </html>
