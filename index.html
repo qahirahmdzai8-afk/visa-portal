@@ -6,6 +6,11 @@
 <title>Pak Visa</title>
 
 <style>
+:root{
+  --pak-blue:#0b7dbd;
+  --pak-blue-light:#eaf4fb;
+}
+
 *{
   margin:0;
   padding:0;
@@ -14,7 +19,7 @@
 }
 
 body{
-  background:#f2f2f2;
+  background:#f5f5f5;
 }
 
 /* ===== HEADER (سفید) ===== */
@@ -29,13 +34,12 @@ body{
 
 .logo img{
   height:40px;
-  display:block;
 }
 
 .menu-btn{
   font-size:26px;
+  color:var(--pak-blue);
   cursor:pointer;
-  color:#0a7dbd;
 }
 
 /* ===== MENU ===== */
@@ -53,54 +57,60 @@ body{
   border-top:1px solid #eee;
 }
 
-/* ===== CARD (خودی کارت آبی) ===== */
+/* ===== LIGHT BLUE BACKGROUND (خیلی کم) ===== */
+.light-blue{
+  background:var(--pak-blue-light);
+  padding:22px 0;
+}
+
+/* ===== CARD (سفید مثل سایت رسمی) ===== */
 .card{
   max-width:420px;
-  margin:25px auto;
-  background:#0a7dbd;        /* کارت آبی */
+  margin:0 auto;
+  background:#ffffff;
   padding:22px;
-  border-radius:8px;
+  border-radius:6px;
   text-align:center;
 }
 
-/* ===== TEXT داخل کارت ===== */
+/* ===== CONTENT ===== */
 .ref{
-  color:#ffffff;
+  color:var(--pak-blue);
   font-size:18px;
   font-weight:bold;
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 .photo img{
   width:150px;
   height:190px;
   object-fit:cover;
-  border:3px solid #ffffff;
-  background:#ffffff;
-  margin-bottom:18px;
+  border:1px solid #ccc;
+  margin-bottom:16px;
 }
 
+/* ===== TEXT ===== */
 .label{
-  color:#dbefff;
+  color:#8a8a8a;
   font-size:13px;
   margin-top:12px;
 }
 
 .value{
-  color:#ffffff;
   font-size:16px;
   margin-top:4px;
+  color:#000;
 }
 
 /* ===== LOGOUT ===== */
 .logout{
   max-width:420px;
   margin:15px auto;
-  background:#0a7dbd;
-  color:#ffffff;
+  background:var(--pak-blue);
+  color:#fff;
   padding:12px;
   text-align:center;
-  border-radius:5px;
+  border-radius:4px;
   cursor:pointer;
 }
 
@@ -132,50 +142,53 @@ body{
   <a href="#">Contact</a>
 </div>
 
-<!-- CARD -->
-<div class="card">
+<!-- LIGHT BLUE AREA -->
+<div class="light-blue">
 
-  <div class="ref">
-    Visa Reference Number –<br>
-    88006011480
+  <!-- CARD -->
+  <div class="card">
+
+    <div class="ref">
+      Visa Reference Number –<br>
+      88006011480
+    </div>
+
+    <div class="photo">
+      <img src="photo.jpg" alt="Photo">
+    </div>
+
+    <div class="label">NAME</div>
+    <div class="value">Safi Mudasir</div>
+
+    <div class="label">Passport No</div>
+    <div class="value">P05926591</div>
+
+    <div class="label">Passport Country</div>
+    <div class="value">Afghanistan</div>
+
+    <div class="label">Visa Category</div>
+    <div class="value">Tourist / Visit</div>
+
+    <div class="label">Visa Sub Category</div>
+    <div class="value">Individual (Less Than 3 Months)</div>
+
+    <div class="label">Application Type</div>
+    <div class="value">Entry</div>
+
+    <div class="label">Staying Facility</div>
+    <div class="value">Multiple Entry – Upto 1 Year</div>
+
+    <div class="label">Visa Start Date</div>
+    <div class="value">21 Dec 2025</div>
+
   </div>
-
-  <div class="photo">
-    <img src="photo.jpg" alt="Photo">
-  </div>
-
-  <div class="label">NAME</div>
-  <div class="value">Safi Mudasir</div>
-
-  <div class="label">Passport No</div>
-  <div class="value">P05926591</div>
-
-  <div class="label">Passport Country</div>
-  <div class="value">Afghanistan</div>
-
-  <div class="label">Visa Category</div>
-  <div class="value">Tourist / Visit</div>
-
-  <div class="label">Visa Sub Category</div>
-  <div class="value">Individual (Less Than 3 Months)</div>
-
-  <div class="label">Application Type</div>
-  <div class="value">Entry</div>
-
-  <div class="label">Staying Facility</div>
-  <div class="value">Multiple Entry – Upto 1 Year</div>
-
-  <div class="label">Visa Start Date</div>
-  <div class="value">21 Dec 2025</div>
-
 </div>
 
-<!-- LOGOUT -->
 <div class="logout" onclick="logout()">Logout</div>
 
 <script>
 function toggleMenu(){
-  var m = document.getElementById("menu");
+  const m = document.getElementById("menu");
   m.style.display = (m.style.display === "block") ? "none" : "block";
 }
 
