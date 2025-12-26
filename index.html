@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa</title>
+<title>Pak Visa – Application Status</title>
 
 <style>
 *{
@@ -17,31 +17,46 @@ body{
   background:#f2f2f2;
 }
 
+/* ===== LOADER ===== */
+#loader{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#fff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+
+.spinner{
+  width:80px;
+  height:80px;
+  border:6px solid #e0e0e0;
+  border-top:6px solid #0a7dbd;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
 /* ===== HEADER ===== */
 .header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:8px 12px;
+  padding:10px 14px;
   background:#fff;
   border-bottom:1px solid #ddd;
 }
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
 .logo img{
   height:42px;
-}
-
-.logo-text{
-  font-size:14px;
-  color:#1b5e20;
-  font-weight:bold;
-  line-height:1.2;
 }
 
 .menu-btn{
@@ -64,40 +79,46 @@ body{
   border-top:1px solid #eee;
 }
 
-/* ===== CONTENT ===== */
+/* ===== CARD ===== */
 .card{
   max-width:420px;
-  margin:10px auto;
+  margin:15px auto;
   background:#fff;
-  padding:18px;
+  padding:20px;
   text-align:center;
 }
 
-.ref{
-  font-size:22px;
+.ref-title{
+  font-size:20px;
   font-weight:bold;
-  margin:12px 0;
 }
 
+.ref-number{
+  font-size:22px;
+  font-weight:bold;
+  margin-top:6px;
+}
+
+/* ===== PHOTO ===== */
 .photo img{
-  width:160px;
-  height:200px;
+  width:150px;
+  height:190px;
   object-fit:cover;
   border:1px solid #ccc;
-  margin:12px 0;
+  margin:15px 0;
 }
 
 /* ===== TEXT ===== */
 .label{
   color:#777;
-  font-size:13px;
+  font-size:14px;
   margin-top:12px;
 }
 
 .value{
-  font-size:16px;
-  margin-top:4px;
+  font-size:17px;
   font-weight:bold;
+  margin-top:3px;
 }
 
 /* ===== LOGOUT ===== */
@@ -109,8 +130,8 @@ body{
   padding:14px;
   text-align:center;
   border-radius:4px;
+  font-size:16px;
   cursor:pointer;
-  font-size:18px;
 }
 
 /* ===== PRINT (PDF) ===== */
@@ -126,14 +147,15 @@ body{
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
 <!-- HEADER -->
 <div class="header">
   <div class="logo">
-    <img src="logo.jpg" alt="Pak Visa Logo">
-    <div class="logo-text">
-      Pak Visa<br>
-      Islamic Republic of Pakistan
-    </div>
+    <img src="logo.jpg" alt="Pak Visa">
   </div>
   <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </div>
@@ -148,10 +170,8 @@ body{
 <!-- CONTENT -->
 <div class="card">
 
-  <div class="ref">
-    Visa Reference Number<br>
-    88006011480
-  </div>
+  <div class="ref-title">Visa Reference Number</div>
+  <div class="ref-number">88006011480</div>
 
   <div class="photo">
     <img src="photo.jpg" alt="Applicant Photo">
@@ -194,6 +214,12 @@ function toggleMenu(){
 
 function logout(){
   alert("Logged out successfully");
+}
+
+window.onload = function(){
+  setTimeout(function(){
+    document.getElementById("loader").style.display = "none";
+  }, 1500);
 }
 </script>
 
