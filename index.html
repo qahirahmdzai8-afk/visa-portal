@@ -2,103 +2,168 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Pakistan Visa Application Portal</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, sans-serif;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
 }
-body{
-  background:#f2f2f2;
+
+/* ===== HEADER ===== */
+.header {
+    background: #ffffff;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
 }
-.header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:8px 12px;
-  background:#fff;
-  border-bottom:1px solid #ddd;
+
+.logo {
+    display: flex;
+    align-items: center;
 }
-.logo img{
-  height:40px;
+
+.logo img {
+    height: 45px;
+    margin-right: 10px;
 }
-.menu-btn{
-  font-size:26px;
-  cursor:pointer;
+
+.logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1b5e20;
 }
-#menu{
-  display:none;
-  background:#fff;
+
+/* ===== MENU ICON ===== */
+.menu {
+    font-size: 28px;
+    cursor: pointer;
 }
-#menu a{
-  display:block;
-  padding:12px;
-  text-decoration:none;
-  color:#000;
-  border-top:1px solid #eee;
+
+/* ===== DROPDOWN MENU ===== */
+.dropdown {
+    display: none;
+    background: #ffffff;
+    border-bottom: 1px solid #ccc;
 }
-.card{
-  max-width:420px;
-  margin:0 auto;
-  background:#fff;
-  padding:18px;
-  text-align:center;
+
+.dropdown a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    border-top: 1px solid #eee;
 }
-.photo img{
-  width:140px;
-  height:180px;
-  object-fit:cover;
-  border:1px solid #ccc;
+
+.dropdown a:hover {
+    background: #f0f0f0;
 }
-.logout{
-  max-width:420px;
-  margin:15px auto;
-  background:#0a7dbd;
-  color:#fff;
-  padding:12px;
-  text-align:center;
+
+/* ===== CONTENT ===== */
+.container {
+    padding: 20px;
+}
+
+.reference {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.photo {
+    width: 200px;
+    border: 1px solid #ccc;
+    margin: 15px auto;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.passport {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* ===== BUTTON ===== */
+button {
+    margin-top: 25px;
+    width: 90%;
+    max-width: 300px;
+    padding: 14px;
+    font-size: 20px;
+    background: #0b79b7;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 </style>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("dropdown");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+</script>
+
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
 <div class="header">
-  <div class="logo">
-    <img src="logo.jpg" alt="Pak Visa">
-  </div>
-  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo">
+        <span>Pak Visa<br><small>Islamic Republic of Pakistan</small></span>
+    </div>
+    <div class="menu" onclick="toggleMenu()">☰</div>
 </div>
 
-<div id="menu">
-  <a href="#">Home</a>
-  <a href="#">Visa Status</a>
-  <a href="#">Contact</a>
+<!-- ===== MENU ===== -->
+<div id="dropdown" class="dropdown">
+    <a href="#">Home</a>
+    <a href="#">Visa Status</a>
+    <a href="#">Profile</a>
+    <a href="#">Logout</a>
 </div>
 
-<div class="card">
-  <h3>Visa Reference Number</h3>
-  <p>88006011480</p>
+<!-- ===== CONTENT ===== -->
+<div class="container">
 
-  <div class="photo">
-    <img src="photo.jpg" alt="Photo">
-  </div>
+    <div class="reference">
+        Visa Reference Number<br>
+        88006011480
+    </div>
 
-  <p><b>Name:</b> Safi Mudasir</p>
-  <p><b>Passport:</b> P05926591</p>
+    <img src="photo.jpg" class="photo" alt="Photo">
+
+    <div class="name">
+        Name: Safi Mudasir
+    </div>
+
+    <div class="passport">
+        Passport: P05926591
+    </div>
+
+    <button>Logout</button>
+
 </div>
 
-<div class="logout">Logout</div>
-
-<script>
-function toggleMenu(){
-  var m = document.getElementById("menu");
-  m.style.display = m.style.display === "block" ? "none" : "block";
-}
+</body>
+</html>}
 </script>
 
 </body>
