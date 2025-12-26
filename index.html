@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Visa Details</title>
+<title>Pak Visa – Visa Details</title>
 
 <style>
 *{
@@ -14,123 +14,134 @@
 }
 
 body{
-  background:#f4f6f8; /* بک‌گراند رسمی */
+  background:#f2f4f6;
 }
 
-/* ===== HEADER ===== */
+/* ===== Header ===== */
 .header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 18px;
   background:#fff;
-  border-bottom:1px solid #e6e6e6;
+  border-bottom:1px solid #ddd;
+  padding:12px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
 
 .logo img{
-  height:44px;
+  height:36px;
 }
 
 .menu{
-  font-size:28px;
+  font-size:26px;
   color:#1f4fa3;
 }
 
-/* ===== CONTENT ===== */
+/* ===== Main Card ===== */
 .container{
   max-width:420px;
-  margin:0 auto;
-  padding:20px 16px 40px;
+  margin:20px auto;
+  background:#fff;
+  border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.1);
+  overflow:hidden;
 }
 
-/* blue line (left aligned) */
-.blue-line{
-  width:70px;
+.top-line{
   height:4px;
   background:#1f4fa3;
-  margin:6px 0 22px;
+  width:60px;
+  margin:16px;
 }
 
-/* ===== TITLE ===== */
+/* ===== Content ===== */
+.content{
+  padding:10px 20px 30px;
+  text-align:center;
+}
+
 .ref-title{
   color:#1f4fa3;
-  font-size:22px;
+  font-size:20px;
   font-weight:600;
-  text-align:center;
 }
 
 .ref-number{
-  color:#1f4fa3;
+  margin-top:10px;
   font-size:26px;
   font-weight:700;
-  text-align:center;
-  margin-top:8px;
+  color:#1f4fa3;
 }
 
-/* ===== PHOTO ===== */
-.photo{
-  text-align:center;
-  margin:26px 0 10px;
-}
-
-.photo img{
-  width:220px;
-  height:260px;
-  object-fit:cover;
+/* ===== Photo ===== */
+.photo-box{
+  margin:25px auto 15px;
+  width:180px;
   background:#fff;
+  padding:8px;
+  border:1px solid #ddd;
 }
 
-/* ===== DETAILS ===== */
+.photo-box img{
+  width:100%;
+  display:block;
+}
+
+/* ===== Info ===== */
 .label{
-  text-align:center;
-  color:#9a9a9a;
+  margin-top:20px;
   font-size:14px;
-  margin-top:22px;
+  font-weight:700;
+  color:#666;
 }
 
 .value{
-  text-align:center;
-  font-size:18px;
   margin-top:6px;
-  color:#000;
+  font-size:16px;
+  color:#333;
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- Header -->
 <div class="header">
   <div class="logo">
-    <img src="logo.jpg" alt="Pak Visa">
+    <img src="logo.png" alt="Pak Visa">
   </div>
   <div class="menu">☰</div>
 </div>
 
-<!-- CONTENT -->
+<!-- Card -->
 <div class="container">
+  <div class="top-line"></div>
 
-  <div class="blue-line"></div>
+  <div class="content">
+    <div class="ref-title">Visa Reference Number -</div>
+    <div class="ref-number">88004451584</div>
 
-  <div class="ref-title">Visa Reference Number –</div>
-  <div class="ref-number">88004451584</div>
+    <div class="photo-box">
+      <img src="photo.jpg" alt="Applicant Photo">
+    </div>
 
-  <div class="photo">
-    <img src="photo.jpg" alt="Photo">
+    <div class="label">NAME</div>
+    <div class="value">Ahmad Zai Abdul Qahir</div>
+
+    <div class="label">Passport No</div>
+    <div class="value">P04382582</div>
+
+    <div class="label">Passport Country</div>
+    <div class="value">Afghanistan</div>
+
+    <div class="label">Visa Category</div>
+    <div class="value">Visit Visa</div>
   </div>
-
-  <div class="label">NAME</div>
-  <div class="value">Ahmad Zai Abdul Qahir</div>
-
-  <div class="label"><strong>Passport No</strong></div>
-  <div class="value">P04382582</div>
-
-  <div class="label"><strong>Passport Country</strong></div>
-  <div class="value">Afghanistan</div>
-
-  <div class="label">Visa Category</div>
-  <div class="value">Tourist / Visit</div>
-
 </div>
 
 </body>
