@@ -2,129 +2,214 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pak Visa</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
 body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f5f5f5;
+  background:#f2f2f2;
 }
 
-/* Header */
+/* ===== LOADING ===== */
+#loader{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.spinner{
+  width:70px;
+  height:70px;
+  border:6px solid #ddd;
+  border-top:6px solid #0a7dbd;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+/* ===== HEADER ===== */
 .header{
-    background:#ffffff;
-    border-bottom:1px solid #ddd;
-    padding:10px 15px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 12px;
+  background:#fff;
+  border-bottom:1px solid #ddd;
 }
 
-.left{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.logo img{
+  height:40px;
 }
 
-.header img{
-    height:40px;
+.menu-btn{
+  font-size:26px;
+  cursor:pointer;
 }
 
-.right{
-    display:flex;
-    align-items:center;
-    gap:15px;
+/* ===== MENU ===== */
+#menu{
+  display:none;
+  background:#fff;
+  border-bottom:1px solid #ddd;
 }
 
-.logout{
-    font-size:14px;
-    color:#007b5e;
-    text-decoration:none;
-    font-weight:bold;
+#menu a{
+  display:block;
+  padding:12px;
+  text-decoration:none;
+  color:#000;
+  border-top:1px solid #eee;
 }
 
-.menu{
-    font-size:24px;
-}
-
-/* Card */
+/* ===== CONTENT ===== */
 .card{
-    max-width:420px;
-    background:#ffffff;
-    margin:20px auto;
-    padding:20px;
-    text-align:center;
-    border-radius:6px;
+  max-width:420px;
+  margin:10px auto;
+  background:#fff;
+  padding:18px;
+  text-align:center;
 }
 
-.photo{
-    width:140px;
-    height:140px;
-    object-fit:cover;
-    border:1px solid #ccc;
-    margin:15px auto;
+.ref{
+  font-size:18px;
+  font-weight:bold;
+  margin:10px 0;
 }
 
+.photo img{
+  width:140px;
+  height:180px;
+  object-fit:cover;
+  border:1px solid #ccc;
+  margin:12px 0;
+}
+
+/* ===== TEXT ===== */
 .label{
-    color:#888;
-    font-size:14px;
-    margin-top:14px;
+  color:#888;
+  font-size:13px;
+  margin-top:12px;
 }
 
 .value{
-    font-size:18px;
-    font-weight:bold;
-    margin-top:4px;
+  font-size:16px;
+  margin-top:3px;
+}
+
+/* ===== LOGOUT ===== */
+.logout{
+  max-width:420px;
+  margin:15px auto;
+  background:#0a7dbd;
+  color:#fff;
+  padding:12px;
+  text-align:center;
+  border-radius:3px;
+  cursor:pointer;
+}
+
+/* ===== PRINT ===== */
+@media print{
+  .menu-btn,
+  #menu,
+  .logout{
+    display:none !important;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Header -->
+<!-- LOADING -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- HEADER -->
 <div class="header">
-    <div class="left">
-        <img src="https://i.ibb.co/Lzzcbb4y/logo.jpg" alt="Pak Visa">
-    </div>
-
-    <div class="right">
-        <a href="#" class="logout">Logout</a>
-        <div class="menu">☰</div>
-    </div>
+  <div class="logo">
+    <img src="logo.jpg" alt="Pak Visa">
+  </div>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
 </div>
 
-<!-- Content -->
+<!-- MENU -->
+<div id="menu">
+  <a href="#">Home</a>
+  <a href="#">Visa Status</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- CONTENT -->
 <div class="card">
+  <div class="ref">
+    Visa Reference Number<br>
+    88006011480
+  </div>
 
-    <div class="label">Visa Reference Number</div>
-    <div class="value">88006011480</div>
+  <div class="photo">
+    <img src="photo.jpg" alt="Photo">
+  </div>
 
-    <img class="photo" src="https://i.ibb.co/vCL5VSpn/photo.jpg" alt="Photo">
+  <div class="label">Name</div>
+  <div class="value">Safi Mudasir</div>
 
-    <div class="label">Name</div>
-    <div class="value">Safi Mudasir</div>
+  <div class="label">Passport No</div>
+  <div class="value">P05926591</div>
 
-    <div class="label">Passport No</div>
-    <div class="value">P05926591</div>
+  <div class="label">Passport Country</div>
+  <div class="value">Afghanistan</div>
 
-    <div class="label">Passport Country</div>
-    <div class="value">Afghanistan</div>
+  <div class="label">Visa Category</div>
+  <div class="value">Tourist / Visit</div>
 
-    <div class="label">Visa Category</div>
-    <div class="value">Tourist / Visit</div>
+  <div class="label">Visa Sub Category</div>
+  <div class="value">Individual (Less Than 3 Months)</div>
 
-    <div class="label">Visa Sub Category</div>
-    <div class="value">Individual (Less Than 3 Months)</div>
+  <div class="label">Application Type</div>
+  <div class="value">Entry</div>
 
-    <div class="label">Application Type</div>
-    <div class="value">Entry</div>
-
-    <div class="label">Staying Facility</div>
-    <div class="value">Multiple Entry – Up to 1 Year</div>
-
+  <div class="label">Staying Facility</div>
+  <div class="value">Multiple Entry – Up to 1 Year</div>
 </div>
+
+<!-- LOGOUT -->
+<div class="logout" onclick="logout()">Logout</div>
+
+<script>
+function toggleMenu(){
+  var m = document.getElementById("menu");
+  m.style.display = (m.style.display === "block") ? "none" : "block";
+}
+
+function logout(){
+  alert("Logged out successfully");
+}
+
+/* ===== HIDE LOADING AFTER PAGE LOAD ===== */
+window.onload = function(){
+  document.getElementById("loader").style.display = "none";
+};
+</script>
 
 </body>
 </html>
