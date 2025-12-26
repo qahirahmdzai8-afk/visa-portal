@@ -14,8 +14,7 @@
 }
 
 body{
-  background:#ffffff;
-  color:#000;
+  background:#f3f5f7; /* خاکستری روشن مثل سایت اصلی */
 }
 
 /* ===== HEADER ===== */
@@ -23,8 +22,9 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px 16px;
-  border-bottom:1px solid #e6e6e6;
+  padding:12px 16px;
+  background:#fff;
+  border-bottom:1px solid #e5e5e5;
 }
 
 .logo img{
@@ -36,39 +36,47 @@ body{
   color:#1f4fa3;
 }
 
-/* ===== CONTENT ===== */
-.content{
+/* ===== PAGE WRAPPER ===== */
+.wrapper{
+  padding:18px 12px;
+}
+
+/* ===== CARD ===== */
+.card{
   max-width:420px;
   margin:0 auto;
-  padding:22px 14px;
-  text-align:center;
+  background:#fff;
+  padding:26px 18px 30px;
 }
 
 /* blue line */
 .blue-line{
-  width:60px;
+  width:70px;
   height:4px;
   background:#1f4fa3;
-  margin:10px auto 16px;
+  margin-bottom:18px;
 }
 
 /* ===== TITLE ===== */
 .ref-title{
+  text-align:center;
   color:#1f4fa3;
   font-size:22px;
   font-weight:600;
 }
 
 .ref-number{
+  text-align:center;
   color:#1f4fa3;
   font-size:26px;
-  font-weight:bold;
+  font-weight:700;
   margin-top:6px;
 }
 
 /* ===== PHOTO ===== */
 .photo{
-  margin:22px 0;
+  margin:26px 0;
+  text-align:center;
 }
 
 .photo img{
@@ -81,12 +89,14 @@ body{
 
 /* ===== TEXT ===== */
 .label{
-  color:#9c9c9c;
+  text-align:center;
+  color:#9a9a9a;
   font-size:14px;
   margin-top:22px;
 }
 
 .value{
+  text-align:center;
   font-size:18px;
   margin-top:6px;
 }
@@ -109,35 +119,31 @@ body{
 </div>
 
 <!-- CONTENT -->
-<div class="content">
+<div class="wrapper">
+  <div class="card">
 
-  <div class="blue-line"></div>
+    <div class="blue-line"></div>
 
-  <div class="ref-title">Visa Reference Number –</div>
-  <div class="ref-number">88006011480</div>
+    <div class="ref-title">Visa Reference Number –</div>
+    <div class="ref-number">88004451584</div>
 
-  <div class="photo">
-    <img src="photo.jpg" alt="Applicant Photo">
+    <div class="photo">
+      <img src="photo.jpg" alt="Applicant Photo">
+    </div>
+
+    <div class="label">NAME</div>
+    <div class="value">Ahmad Zai Abdul Qahir</div>
+
+    <div class="label"><strong>Passport No</strong></div>
+    <div class="value">P04382582</div>
+
+    <div class="label"><strong>Passport Country</strong></div>
+    <div class="value">Afghanistan</div>
+
+    <div class="label">Visa Category</div>
+    <div class="value">Tourist / Visit</div>
+
   </div>
-
-  <div class="label">NAME</div>
-  <div class="value">Safi Mudasir</div>
-
-  <div class="label">Passport No</div>
-  <div class="value">P05926591</div>
-
-  <div class="label">Passport Country</div>
-  <div class="value">Afghanistan</div>
-
-  <div class="label">Visa Category</div>
-  <div class="value">Tourist / Visit</div>
-
-  <div class="label">Visa Sub Category</div>
-  <div class="value">Individual (Less Than 3 Months)</div>
-
-  <div class="label">Application Type</div>
-  <div class="value">Entry</div>
-
 </div>
 
 </body>
