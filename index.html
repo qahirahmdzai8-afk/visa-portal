@@ -39,7 +39,7 @@ body{
 
 /* ===== LIGHT BACKGROUND (دور کارت) ===== */
 .wrapper{
-  background:#f3f6f8;   /* خاکستری خیلی روشن مثل NADRA */
+  background:#f3f6f8;
   padding:28px 12px;
 }
 
@@ -78,12 +78,18 @@ body{
   margin-bottom:22px;
 }
 
-.photo img{
+/* چوکات اصلی عکس اول */
+.photo-frame{
+  display:inline-block;
+  padding:6px;              /* نازک مثل عکس اول */
+  background:#f2f3f5;       /* off-white اصلی */
+}
+
+.photo-frame img{
   width:150px;
   height:190px;
   object-fit:cover;
-  border:1px solid #dcdcdc;
-  background:#fff;
+  display:block;
 }
 
 /* ===== TEXT ===== */
@@ -125,7 +131,9 @@ body{
       </div>
 
       <div class="photo">
-        <img src="photo.jpg" alt="Photo">
+        <div class="photo-frame">
+          <img src="photo.jpg" alt="Photo">
+        </div>
       </div>
 
       <div class="label">NAME</div>
