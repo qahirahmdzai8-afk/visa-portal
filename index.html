@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa – Visa Details</title>
+<title>Pak Visa</title>
 
 <style>
 *{
@@ -15,21 +15,21 @@
 
 body{
   background:#ffffff;
-  color:#4f4f4f;
+  color:#6a6a6a;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 .header{
-  background:#ffffff;
-  border-bottom:1px solid #e1e1e1;
-  padding:10px 14px;
   display:flex;
   align-items:center;
   justify-content:space-between;
+  padding:12px 14px;
+  border-bottom:1px solid #e6e6e6;
+  background:#ffffff;
 }
 
 .logo img{
-  height:38px;
+  height:40px;
 }
 
 .menu-btn{
@@ -38,11 +38,11 @@ body{
   cursor:pointer;
 }
 
-/* MENU */
+/* ===== MENU ===== */
 .menu{
   display:none;
   background:#ffffff;
-  border-bottom:1px solid #e1e1e1;
+  border-bottom:1px solid #e6e6e6;
 }
 
 .menu a{
@@ -50,15 +50,14 @@ body{
   padding:14px;
   text-decoration:none;
   color:#4f4f4f;
-  border-top:1px solid #f0f0f0;
+  border-top:1px solid #f2f2f2;
 }
 
-/* CARD */
+/* ===== CARD ===== */
 .card{
   max-width:360px;
   margin:20px auto;
-  background:#f2f5f7;
-  border-radius:2px;
+  background:#f5f6f7;
 }
 
 .card::before{
@@ -67,60 +66,64 @@ body{
   width:60px;
   height:4px;
   background:#1f4fa3;
-  margin:16px;
+  margin:18px;
 }
 
 .content{
-  padding:10px 20px 28px;
+  padding:10px 20px 30px;
   text-align:center;
 }
 
+/* ===== TEXT ===== */
 .ref-title{
-  color:#1f4fa3;
-  font-size:18px;
+  font-size:20px;
   font-weight:600;
+  color:#4f84b5;
 }
 
 .ref-number{
-  margin-top:6px;
-  font-size:24px;
+  margin-top:10px;
+  font-size:26px;
   font-weight:700;
-  color:#1f4fa3;
+  color:#4f84b5;
 }
 
 .divider{
   height:1px;
-  background:#dcdcdc;
-  margin:18px 0;
+  background:#e1e1e1;
+  margin:22px 0;
 }
 
+/* ===== PHOTO ===== */
 .photo{
-  width:170px;
-  margin:0 auto 16px;
+  width:190px;
+  margin:0 auto 18px;
   background:#ffffff;
-  padding:6px;
+  padding:8px;
 }
 
 .photo img{
   width:100%;
 }
 
+/* ===== LABEL & VALUE ===== */
 .label{
-  margin-top:18px;
-  font-size:13px;
+  margin-top:22px;
+  font-size:14px;
   font-weight:700;
   color:#8a8a8a;
 }
 
 .value{
   margin-top:6px;
-  font-size:16px;
-  color:#4f4f4f;
+  font-size:17px;
+  color:#6a6a6a;
 }
 
+/* ===== BUTTON ===== */
 .footer-btn{
   max-width:360px;
-  margin:20px auto 30px;
+  margin:25px auto 40px;
   text-align:center;
 }
 
@@ -128,51 +131,15 @@ body{
   display:inline-block;
   background:#1f4fa3;
   color:#ffffff;
-  padding:12px 26px;
-  text-decoration:none;
+  padding:12px 30px;
   font-size:15px;
+  text-decoration:none;
   border-radius:2px;
-}
-
-/* LOADER (مثل سایت اصلی) */
-.loader-bg{
-  position:fixed;
-  inset:0;
-  background:#ffffff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:999;
-}
-
-.loader{
-  width:70px;
-  height:70px;
-  border:4px solid #e3ecf6;
-  border-top:4px solid #1f4fa3;
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-  to{transform:rotate(360deg);}
-}
-
-/* مخفی بودن محتوا تا لود کامل */
-#app{
-  display:none;
 }
 </style>
 </head>
 
 <body>
-
-<!-- LOADER -->
-<div class="loader-bg" id="loader">
-  <div class="loader"></div>
-</div>
-
-<div id="app">
 
 <!-- HEADER -->
 <div class="header">
@@ -184,9 +151,9 @@ body{
 
 <!-- MENU -->
 <div class="menu" id="menu">
-  <a href="#" onclick="reloadPage()">Home</a>
-  <a href="#" onclick="reloadPage()">Visa Status</a>
-  <a href="#" onclick="reloadPage()">Logout</a>
+  <a href="#">Home</a>
+  <a href="#">Visa Status</a>
+  <a href="#">Logout</a>
 </div>
 
 <!-- CARD -->
@@ -199,54 +166,51 @@ body{
     <div class="divider"></div>
 
     <div class="photo">
-      <img src="photo.jpg">
+      <img src="photo.jpg" alt="Applicant Photo">
     </div>
 
-    <div class="label">APPLICATION TYPE</div>
+    <div class="label">NAME</div>
+    <div class="value">Ahmad Zai Abdul Qahir</div>
+
+    <div class="label">Passport No</div>
+    <div class="value">P04382582</div>
+
+    <div class="label">Passport Country</div>
+    <div class="value">Afghanistan</div>
+
+    <div class="label">Visa Category</div>
+    <div class="value">Tourist / Visit</div>
+
+    <div class="label">Visa Sub Category</div>
+    <div class="value">Individual (less Than 3 Months)</div>
+
+    <div class="label">Application Type</div>
     <div class="value">Entry</div>
 
-    <div class="label">STAYING FACILITY</div>
+    <div class="label">Staying Facility</div>
     <div class="value">Multiple Entry – Upto 1 Year</div>
 
-    <div class="label">VISA START DATE</div>
-    <div class="value">07 Jan 2025</div>
+    <div class="label">Visa Start Date</div>
+    <div class="value">07 jan 2025</div>
 
-    <div class="label">VISA END DATE</div>
-    <div class="value">06 Jul 2025</div>
+    <div class="label">Visa End Date</div>
+    <div class="value">06 jul 2025</div>
 
-    <div class="label">VISA DURATION</div>
+    <div class="label">Visa Duration</div>
     <div class="value">60 day(s)</div>
 
   </div>
 </div>
 
 <div class="footer-btn">
-  <a href="#" onclick="reloadPage()">Back to Login</a>
-</div>
-
+  <a href="#">Back to Login</a>
 </div>
 
 <script>
 function toggleMenu(){
-  const m=document.getElementById("menu");
-  m.style.display = m.style.display==="block" ? "none":"block";
+  const m = document.getElementById("menu");
+  m.style.display = m.style.display === "block" ? "none" : "block";
 }
-
-/* شبیه سایت اصلی */
-function reloadPage(){
-  document.getElementById("app").style.display="none";
-  document.getElementById("loader").style.display="flex";
-  setTimeout(()=>{
-    document.getElementById("loader").style.display="none";
-    document.getElementById("app").style.display="block";
-  },2000);
-}
-
-/* لود اولیه */
-setTimeout(()=>{
-  document.getElementById("loader").style.display="none";
-  document.getElementById("app").style.display="block";
-},2000);
 </script>
 
 </body>
