@@ -14,24 +14,18 @@
 }
 
 body{
-  background:#f4f4f4;
+  background:#f2f2f2;
   color:#333;
 }
 
 /* ===== HEADER ===== */
 .header{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   padding:12px 16px;
   background:#fff;
   border-bottom:1px solid #ddd;
-}
-
-.logo{
-  display:flex;
-  align-items:center;
-  gap:8px;
 }
 
 .logo img{
@@ -58,13 +52,29 @@ body{
   border-top:1px solid #eee;
 }
 
-/* ===== CARD ===== */
+/* ===== CARD WRAPPER ===== */
 .card{
   max-width:420px;
   margin:18px auto;
   background:#fff;
   padding:20px 16px;
   text-align:center;
+
+  /* 👇 کارت معلوم شود */
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+  border-radius:2px;
+  position:relative;
+}
+
+/* 👇 خط آبی بالای کارت (مثل سایت اصلی) */
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:70px;
+  height:4px;
+  background:#1a73b8;
 }
 
 /* ===== REF ===== */
@@ -72,7 +82,7 @@ body{
   color:#1a73b8;
   font-size:18px;
   font-weight:600;
-  margin-bottom:18px;
+  margin:20px 0 18px;
 }
 
 /* ===== PHOTO ===== */
@@ -88,7 +98,7 @@ body{
 .label{
   font-size:14px;
   color:#777;
-  margin-top:14px;
+  margin-top:16px;
 }
 
 .value{
@@ -99,7 +109,7 @@ body{
 /* ===== BUTTON ===== */
 .btn{
   max-width:420px;
-  margin:20px auto;
+  margin:22px auto;
   background:#1a73b8;
   color:#fff;
   text-align:center;
@@ -114,7 +124,7 @@ body{
   text-align:center;
   font-size:13px;
   color:#777;
-  padding:16px 10px;
+  padding:18px 10px;
 }
 
 /* ===== PRINT ===== */
@@ -143,7 +153,7 @@ body{
   <a href="#">Contact</a>
 </div>
 
-<!-- CONTENT -->
+<!-- CARD -->
 <div class="card">
 
   <div class="ref">
@@ -152,7 +162,7 @@ body{
   </div>
 
   <div class="photo">
-    <img src="photo.jpg" alt="Applicant Photo">
+    <img src="photo.jpg" alt="Photo">
   </div>
 
   <div class="label">NAME</div>
@@ -187,7 +197,7 @@ body{
 
 </div>
 
-<div class="btn" onclick="window.print()">Print / Save PDF</div>
+<div class="btn" onclick="window.print()">Back to Login</div>
 
 <div class="footer">
   COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR,<br>
