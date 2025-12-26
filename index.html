@@ -8,116 +8,90 @@
 <style>
 body{
     margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background:#ffffff;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f8;
     color:#333;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header{
+    background:#fff;
+    border-bottom:1px solid #ddd;
+    padding:12px 16px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:12px 16px;
-    border-bottom:1px solid #ddd;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.logo img{
+.header img{
     height:36px;
 }
 
-.logo span{
-    font-size:20px;
-    font-weight:600;
-    color:#2e7d32;
-}
-
-.menu{
-    font-size:26px;
-}
-
-/* ===== PROGRESS LINE ===== */
-.progress{
-    height:4px;
-    background:#e0e0e0;
-}
-
-.progress div{
-    width:30%;
-    height:100%;
-    background:#1e88e5;
-}
-
-/* ===== CONTENT ===== */
-.container{
+/* CARD */
+.card{
+    background:#fff;
     max-width:420px;
-    margin:0 auto;
-    padding:20px 16px;
-    text-align:center;
+    margin:20px auto;
+    padding:24px 16px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    border-radius:4px;
 }
 
+/* REF NUMBER */
 .ref{
-    color:#1e88e5;
+    text-align:center;
+    color:#1e73be;
     font-size:20px;
-    font-weight:600;
+    font-weight:bold;
     margin-bottom:20px;
 }
 
-/* ===== PHOTO ===== */
+/* PHOTO */
 .photo-box{
-    width:200px;
-    height:240px;
-    margin:0 auto 20px;
-    border:1px solid #ccc;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    text-align:center;
+    margin-bottom:20px;
 }
-
 .photo-box img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    width:160px;
+    height:auto;
+    border:1px solid #ccc;
 }
 
-/* ===== INFO ===== */
+/* TEXT */
 .label{
-    color:#999;
+    text-align:center;
     font-size:13px;
+    color:#777;
     margin-top:16px;
 }
 
 .value{
-    font-size:18px;
+    text-align:center;
+    font-size:16px;
+    font-weight:500;
     margin-top:4px;
 }
 
-/* ===== BUTTON ===== */
+/* BUTTON */
 .btn{
-    margin:30px auto;
     display:block;
+    margin:30px auto 10px;
     width:200px;
-    padding:14px;
-    background:#1e88e5;
+    text-align:center;
+    background:#1e73be;
     color:#fff;
+    padding:12px;
     text-decoration:none;
-    border-radius:4px;
+    border-radius:3px;
     font-size:16px;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer{
     text-align:center;
     font-size:12px;
     color:#666;
     padding:20px 10px;
-    border-top:1px solid #ddd;
 }
 </style>
 </head>
@@ -126,20 +100,12 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-    <div class="logo">
-        <!-- اگر لوگو نشان نداد، نام فایل را دقیق همین بگذار -->
-        <img src="logo.png" alt="Pak Visa Logo">
-        <span>Pak Visa</span>
-    </div>
-    <div class="menu">☰</div>
+    <img src="logo.png" alt="Pak Visa">
+    <div>☰</div>
 </div>
 
-<div class="progress">
-    <div></div>
-</div>
-
-<!-- CONTENT -->
-<div class="container">
+<!-- CARD -->
+<div class="card">
 
     <div class="ref">
         Visa Reference Number –<br>
@@ -147,8 +113,7 @@ body{
     </div>
 
     <div class="photo-box">
-        <!-- عکس -->
-        <img src="photo.jpg" alt="Applicant Photo">
+        <img src="photo.jpg" alt="Photo">
     </div>
 
     <div class="label">NAME</div>
@@ -181,7 +146,8 @@ body{
     <div class="label">Visa Duration</div>
     <div class="value">60 day(s)</div>
 
-    <a class="btn" href="#">Back to Login</a>
+    <a href="#" class="btn">Back to Login</a>
+
 </div>
 
 <!-- FOOTER -->
