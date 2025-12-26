@@ -2,106 +2,115 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>PakVisa – Visa Status</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pak Visa</title>
 
 <style>
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-  background:#f3f5f7;
-  color:#444;
+    background:#f4f6f8;
+    color:#333;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 .header{
-  background:#fff;
-  border-bottom:1px solid #ddd;
-  padding:12px 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+    background:#fff;
+    border-bottom:1px solid #ddd;
 }
 
-.header img{
-  height:38px;
+.header-inner{
+    max-width:1100px;
+    margin:auto;
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    height:48px;
 }
 
 .menu{
-  font-size:26px;
+    font-size:28px;
 }
 
-/* ===== CARD ===== */
-.wrapper{
-  padding:14px;
+/* CARD */
+.container{
+    max-width:600px;
+    margin:30px auto;
+    padding:0 12px;
 }
 
 .card{
-  background:#fff;
-  max-width:420px;
-  margin:0 auto;
-  padding:26px 18px;
-  box-shadow:0 1px 6px rgba(0,0,0,.15);
+    background:#fff;
+    padding:24px;
+    border-radius:4px;
+    box-shadow:0 0 0 1px #e0e0e0;
 }
 
-/* ===== REF NUMBER ===== */
-.ref{
-  text-align:center;
-  color:#1b75bc;
-  font-size:20px;
-  font-weight:bold;
-  margin-bottom:20px;
+.title{
+    text-align:center;
+    color:#1b75bc;
+    font-size:22px;
+    margin-bottom:20px;
 }
 
-/* ===== PHOTO ===== */
+.title span{
+    font-weight:bold;
+}
+
 .photo{
-  text-align:center;
-  margin-bottom:18px;
-}
-.photo img{
-  width:180px;
-  border:1px solid #ccc;
+    width:180px;
+    display:block;
+    margin:0 auto 20px auto;
+    border:1px solid #ccc;
 }
 
-/* ===== TEXT ===== */
+/* INFO */
+.row{
+    margin-bottom:18px;
+    text-align:center;
+}
+
 .label{
-  text-align:center;
-  font-size:13px;
-  color:#777;
-  margin-top:18px;
+    font-size:13px;
+    color:#888;
+    margin-bottom:4px;
 }
 
 .value{
-  text-align:center;
-  font-size:16px;
-  font-weight:500;
-  margin-top:6px;
+    font-size:16px;
 }
 
-/* ===== BUTTON ===== */
+.bold{
+    font-weight:bold;
+}
+
+/* BUTTON */
 .btn{
-  display:block;
-  margin:30px auto 0;
-  width:220px;
-  background:#1b75bc;
-  color:#fff;
-  text-align:center;
-  padding:12px;
-  text-decoration:none;
-  font-size:16px;
+    width:100%;
+    padding:14px;
+    background:#1b75bc;
+    color:#fff;
+    border:none;
+    font-size:16px;
+    margin-top:20px;
+    cursor:pointer;
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer{
-  text-align:center;
-  font-size:12px;
-  color:#666;
-  padding:18px 10px;
+    text-align:center;
+    font-size:12px;
+    color:#777;
+    padding:20px 10px;
 }
 </style>
 </head>
@@ -110,63 +119,83 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <img src="logo.jpg" alt="Pak Visa">
-  <div class="menu">☰</div>
+    <div class="header-inner">
+        <!-- لوگو را اینجا عوض کن -->
+        <img src="logo.png" class="logo">
+        <div class="menu">&#9776;</div>
+    </div>
 </div>
 
-<div class="wrapper">
-
 <!-- CARD -->
+<div class="container">
 <div class="card">
 
-  <div class="ref">
-    Visa Reference Number –<br>
-    88004451584
-  </div>
+<h2 class="title">
+Visa Reference Number –<br>
+<span>88004451584</span>
+</h2>
 
-  <div class="photo">
-    <img src="photo.jpg" alt="Photo">
-  </div>
+<!-- عکس را اینجا عوض کن -->
+<img src="photo.jpg" class="photo">
 
-  <div class="label">NAME</div>
-  <div class="value">Ahmad Zai Abdul Qahir</div>
+<div class="row">
+    <div class="label">NAME</div>
+    <div class="value">Ahmad Zai Abdul Qahir</div>
+</div>
 
-  <div class="label">Passport No</div>
-  <div class="value">P04382582</div>
+<div class="row">
+    <div class="label">Passport No</div>
+    <div class="value">P04382582</div>
+</div>
 
-  <div class="label">Passport Country</div>
-  <div class="value">Afghanistan</div>
+<div class="row">
+    <div class="label">Passport Country</div>
+    <div class="value">Afghanistan</div>
+</div>
 
-  <div class="label">Visa Category</div>
-  <div class="value">Tourist / Visit</div>
+<div class="row">
+    <div class="label">Visa Category</div>
+    <div class="value bold">Tourist / Visit</div>
+</div>
 
-  <div class="label">Visa Sub Category</div>
-  <div class="value">Individual (Less Than 3 Months)</div>
+<div class="row">
+    <div class="label">Visa Sub Category</div>
+    <div class="value">Individual (Less Than 3 Months)</div>
+</div>
 
-  <div class="label">Application Type</div>
-  <div class="value">Entry</div>
+<div class="row">
+    <div class="label">Application Type</div>
+    <div class="value">Entry</div>
+</div>
 
-  <div class="label">Staying Facility</div>
-  <div class="value">Multiple Entry – Upto 1 Year</div>
+<div class="row">
+    <div class="label">Staying Facility</div>
+    <div class="value">Multiple Entry – Upto 1 Year</div>
+</div>
 
-  <div class="label">Visa Start Date</div>
-  <div class="value">07 Jan 2025</div>
+<div class="row">
+    <div class="label">Visa Start Date</div>
+    <div class="value">07 Jan 2025</div>
+</div>
 
-  <div class="label">Visa End Date</div>
-  <div class="value">06 Jul 2025</div>
+<div class="row">
+    <div class="label">Visa End Date</div>
+    <div class="value">06 Jul 2025</div>
+</div>
 
-  <div class="label">Visa Duration</div>
-  <div class="value">60 day(s)</div>
+<div class="row">
+    <div class="label">Visa Duration</div>
+    <div class="value">60 day(s)</div>
+</div>
 
-  <a href="#" class="btn">Back to Login</a>
+<button class="btn">Back to Login</button>
 
 </div>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR,<br>
-  GOVERNMENT OF PAKISTAN – V: 5.5.8
+COPYRIGHT © 2015 – 2025 MINISTRY OF INTERIOR, GOVERNMENT OF PAKISTAN – V: 5.5.8
 </div>
 
 </body>
